@@ -1,9 +1,12 @@
-This is the content under the path/cosmosis-standard-library/mf_xt/
+# `mf_xt/` – Halo Mass Function Analysis with CosmoSIS
 
-You should run the code using CosmoSIS.
+This folder contains code under the path:  
+`cosmosis-standard-library/mf_xt/`
 
-Propose of the files:
+You should run the code using [**CosmoSIS**](https://cosmosis.readthedocs.io/en/latest/).
 
-1. Generate the halo mass function by CosmoSIS module and hmf python package
-2. Constrain cosmology by using the mock mass function
-3. Plot all the results
+## 📁 Purpose of the files
+
+- Generate the **halo mass function** using a custom CosmoSIS module and the `hmf` Python package  
+- Use mock mass function data to **constrain cosmological parameters**  
+- **Plot** the results for visual analysis
