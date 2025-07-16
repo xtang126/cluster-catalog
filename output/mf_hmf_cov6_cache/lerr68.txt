@@ -1,0 +1,5 @@
+#parameter lerr68 data_set
+cosmological_parameters--omega_m  0.256395521498297  mf_xt/output/mf_hmf_cov6_cache.txt
+cosmological_parameters--sigma8_input  0.7431011193394808  mf_xt/output/mf_hmf_cov6_cache.txt
+prior  nan  mf_xt/output/mf_hmf_cov6_cache.txt
+post  0.6718398532902348  mf_xt/output/mf_hmf_cov6_cache.txt

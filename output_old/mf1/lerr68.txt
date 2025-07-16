@@ -1,0 +1,5 @@
+#parameter lerr68 data_set
+cosmological_parameters--omega_m  0.2996875886710367  mf_xt/output/mf_test.txt
+cosmological_parameters--sigma8_input  0.7996543084800166  mf_xt/output/mf_test.txt
+prior  nan  mf_xt/output/mf_test.txt
+post  -147.98762004720544  mf_xt/output/mf_test.txt

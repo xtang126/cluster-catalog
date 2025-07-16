@@ -1,0 +1,89 @@
+#cosmological_parameters--omega_m	cosmological_parameters--sigma8_input	prior	like	post
+#sampler=maxlike
+#n_varied=2
+#module_0=mass_function_like 1.1
+#timestamp=2025-07-09T07:21:31.451300
+#platform=Linux-5.14.21-150500.55.97_13.0.78-cray_shasta_c-x86_64-with-glibc2.31
+#platform_version=#1 SMP Thu Mar 13 20:09:44 UTC 2025 (330b47d)
+#uuid=bd96444f6a6949d3bc0ed8201fba2d5c
+#cosmosis_git_version=
+#csl_git_version=
+#cwd_git_version=5ff5d9a45b876d0c2ecc0c6da8da4c99a4c65ef7
+#tolerance=1e-06
+#maxiter=1000
+#output_ini=mf_xt/output/mf_maxlike.ini
+#output_covmat=
+#method=Nelder-Mead
+#max_posterior=False
+#repeats=1
+#nsteps=1
+#start_method=
+## START_OF_PARAMS_INI
+## [runtime]
+## sampler = maxlike
+## root = /global/homes/x/xintang/cosmosis-standard-library
+## resume = F
+## verbosity = debug
+## 
+## [test]
+## save_dir = mf_xt/output/mass_function_xt_hmf_cov5
+## 
+## [emcee]
+## walkers = 20
+## samples = 500
+## burn = 200
+## save_all_parameters = F
+## output_every = 10
+## proposal_scale = 1.0
+## 
+## [maxlike]
+## output_ini = mf_xt/output/mf_maxlike.ini
+## tolerance = 1e-6
+## 
+## [output]
+## filename = mf_xt/output/mf_hmf_cov5.txt
+## format = text
+## lock = T
+## new_file = T
+## 
+## [pipeline]
+## modules = mass_function_like
+## values = mf_xt/values_fit.ini
+## 
+## [prior]
+## omega_m = uniform 0.1 0.5
+## sigma8_input = uniform 0.6 1.0
+## 
+## [likelihoods]
+## mass_function_xt = mass_function_like
+## 
+## [mass_function_like]
+## file = mf_xt/likelihood/mass_function_like_hmf_cov.py
+## z_indices = 1, 3, 5
+## relative_sigma = 0.5
+## 
+## END_OF_PARAMS_INI
+## START_OF_VALUES_INI
+## [cosmological_parameters]
+## omega_m = 0.1 0.3 0.5
+## sigma8_input = 0.6 0.8 1.0
+## h0 = 0.7
+## omega_b = 0.04
+## omega_k = 0.0
+## yhe = 0.245341
+## tau = 0.08
+## n_s = 0.96
+## a_s = 2.1e-9
+## k_s = 0.05
+## n_run = 0.0
+## w = -1.0
+## wa = 0.0
+## 
+## END_OF_VALUES_INI
+## START_OF_PRIORS_INI
+## END_OF_PRIORS_INI
+#start_input=
+0.3	0.8	1.83258146374831	-1.1192393164972073e-30	1.83258146374831
+#evaluations=67
+#successes=67
+#complete=1

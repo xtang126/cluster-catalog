@@ -1,0 +1,5 @@
+#parameter uerr95 data_set
+cosmological_parameters--omega_m  0.4839178243458839  mf_xt/output/mf_hmf.txt
+cosmological_parameters--sigma8_input  0.9919041657450542  mf_xt/output/mf_hmf.txt
+prior  nan  mf_xt/output/mf_hmf.txt
+post  nan  mf_xt/output/mf_hmf.txt

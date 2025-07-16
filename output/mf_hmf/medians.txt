@@ -1,0 +1,5 @@
+#parameter medians sigma data_set
+cosmological_parameters--omega_m  0.29560920966267457  0.1105933686170989  mf_xt/output/mf_hmf.txt
+cosmological_parameters--sigma8_input  0.8089554703351558  0.11376517411218447  mf_xt/output/mf_hmf.txt
+prior  1.83258146374831  4.440892098500626e-16  mf_xt/output/mf_hmf.txt
+post  1.83258146374831  4.440892098500626e-16  mf_xt/output/mf_hmf.txt

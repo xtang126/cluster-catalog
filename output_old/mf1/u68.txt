@@ -1,0 +1,5 @@
+#parameter u68 data_set
+cosmological_parameters--omega_m  0.3000052637844846  mf_xt/output/mf_test.txt
+cosmological_parameters--sigma8_input  0.800444777419378  mf_xt/output/mf_test.txt
+prior  2.525728644308255  mf_xt/output/mf_test.txt
+post  -146.73425204418353  mf_xt/output/mf_test.txt

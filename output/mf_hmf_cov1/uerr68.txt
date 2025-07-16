@@ -1,0 +1,5 @@
+#parameter uerr68 data_set
+cosmological_parameters--omega_m  0.3351908167114379  mf_xt/output/mf_hmf_cov1.txt
+cosmological_parameters--sigma8_input  0.9463842536573689  mf_xt/output/mf_hmf_cov1.txt
+prior  nan  mf_xt/output/mf_hmf_cov1.txt
+post  1.8325813883891096  mf_xt/output/mf_hmf_cov1.txt

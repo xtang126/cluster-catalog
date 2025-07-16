@@ -1,0 +1,5 @@
+#parameter maxlike data_set
+cosmological_parameters--omega_m  0.30084517078336026  mf_xt/output/mf_test.txt
+cosmological_parameters--sigma8_input  0.7991308427277962  mf_xt/output/mf_test.txt
+prior  2.525728644308255  mf_xt/output/mf_test.txt
+post  -60.051386810718185  mf_xt/output/mf_test.txt

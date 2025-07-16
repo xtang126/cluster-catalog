@@ -1,0 +1,1512 @@
+Setting up pipeline from parameter file mf_xt/fit_mass_function_hmf.ini
+-----------------------------------------------------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+Setting up pipeline from parameter file mf_xt/fit_mass_function_hmf.ini
+-----------------------------------------------------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+Setting up pipeline from parameter file mf_xt/fit_mass_function_hmf.ini
+-----------------------------------------------------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+Setting up pipeline from parameter file mf_xt/fit_mass_function_hmf.ini
+-----------------------------------------------------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+Setup all pipeline modules
+
+Setup all pipeline modules
+
+Setup all pipeline modules
+
+Setup all pipeline modules
+
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.2, 0.4)
+cosmological_parameters--sigma8_input  ~ U(0.6, 0.95)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: maxlike
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_hm1.txt
+****************************************************
+--------------------------------------------------
+NOTE: Running optimizer in **max-like** mode:
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.2, 0.4)
+cosmological_parameters--sigma8_input  ~ U(0.6, 0.95)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: maxlike
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_hm1.txt
+****************************************************
+--------------------------------------------------
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.2, 0.4)
+cosmological_parameters--sigma8_input  ~ U(0.6, 0.95)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: maxlike
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_hm1.txt
+****************************************************
+--------------------------------------------------
+NOTE: Running optimizer in **max-like** mode:
+NOTE: not including the prior, just the likelihood.
+NOTE: Set the parameter max_posterior=T to change this.
+NOTE: This won't matter unless you set some non-flat
+NOTE: Running optimizer in **max-like** mode:
+NOTE: not including the prior, just the likelihood.
+NOTE: Set the parameter max_posterior=T to change this.
+NOTE: This won't matter unless you set some non-flat
+NOTE: not including the prior, just the likelihood.
+NOTE: Set the parameter max_posterior=T to change this.
+NOTE: This won't matter unless you set some non-flat
+NOTE: priors in a separate priors file.
+--------------------------------------------------
+NOTE: priors in a separate priors file.
+--------------------------------------------------
+NOTE: priors in a separate priors file.
+--------------------------------------------------
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.2, 0.4)
+cosmological_parameters--sigma8_input  ~ U(0.6, 0.95)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: maxlike
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_hm1.txt
+****************************************************
+--------------------------------------------------
+NOTE: Running optimizer in **max-like** mode:
+NOTE: not including the prior, just the likelihood.
+NOTE: Set the parameter max_posterior=T to change this.
+NOTE: This won't matter unless you set some non-flat
+NOTE: priors in a separate priors file.
+--------------------------------------------------
+Running module mass_function_like
+Running module mass_function_like
+Running module mass_function_like
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Using likelihooods from first run:
+ - (None found)
+Posterior = 2.6592600369327783 for parameter set #1: [0.3, 0.8]
+[Rank 0] Starting from point: [0.3 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Using likelihooods from first run:
+ - (None found)
+Posterior = 2.6592600369327783 for parameter set #1: [0.3, 0.8]
+[Rank 0] Starting from point: [0.3 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Using likelihooods from first run:
+ - (None found)
+Posterior = 2.6592600369327783 for parameter set #1: [0.3, 0.8]
+[Rank 0] Starting from point: [0.3 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Using likelihooods from first run:
+ - (None found)
+Posterior = 2.6592600369327783 for parameter set #1: [0.3, 0.8]
+[Rank 0] Starting from point: [0.3 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #2: [0.3, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #2: [0.3, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #2: [0.3, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #2: [0.3, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #3: [0.305, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #3: [0.305, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #3: [0.305, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #3: [0.305, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #4: [0.3, 0.81]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #4: [0.3, 0.81]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #4: [0.3, 0.81]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #4: [0.3, 0.81]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #5: [0.30500000000000005, 0.79]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #5: [0.30500000000000005, 0.79]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #5: [0.30500000000000005, 0.79]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #5: [0.30500000000000005, 0.79]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #6: [0.30125, 0.805]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #6: [0.30125, 0.805]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #6: [0.30125, 0.805]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #6: [0.30125, 0.805]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #7: [0.3025, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #7: [0.3025, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #7: [0.3025, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #7: [0.3025, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #8: [0.3, 0.805]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #8: [0.3, 0.805]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #8: [0.3, 0.805]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #8: [0.3, 0.805]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #9: [0.3025, 0.795]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #9: [0.3025, 0.795]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #9: [0.3025, 0.795]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #9: [0.3025, 0.795]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #10: [0.300625, 0.8025]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #10: [0.300625, 0.8025]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #10: [0.300625, 0.8025]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #10: [0.300625, 0.8025]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #11: [0.30125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #11: [0.30125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #11: [0.30125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #11: [0.30125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #12: [0.3, 0.8025]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #12: [0.3, 0.8025]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #12: [0.3, 0.8025]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #12: [0.3, 0.8025]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #13: [0.30124999999999996, 0.7975000000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #13: [0.30124999999999996, 0.7975000000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #13: [0.30124999999999996, 0.7975000000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #13: [0.30124999999999996, 0.7975000000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #14: [0.3003125, 0.80125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #14: [0.3003125, 0.80125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #14: [0.3003125, 0.80125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #14: [0.3003125, 0.80125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #15: [0.300625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #15: [0.300625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #15: [0.300625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #15: [0.300625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #16: [0.3, 0.80125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #16: [0.3, 0.80125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #16: [0.3, 0.80125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #16: [0.3, 0.80125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #17: [0.30062500000000003, 0.7987500000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #17: [0.30062500000000003, 0.7987500000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #17: [0.30062500000000003, 0.7987500000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #17: [0.30062500000000003, 0.7987500000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #18: [0.30015625, 0.800625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #18: [0.30015625, 0.800625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #18: [0.30015625, 0.800625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #18: [0.30015625, 0.800625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #19: [0.3003125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #19: [0.3003125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #19: [0.3003125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #19: [0.3003125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #20: [0.3, 0.800625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #20: [0.3, 0.800625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #20: [0.3, 0.800625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #20: [0.3, 0.800625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #21: [0.30031250000000004, 0.7993750000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #21: [0.30031250000000004, 0.7993750000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #21: [0.30031250000000004, 0.7993750000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #21: [0.30031250000000004, 0.7993750000000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #22: [0.300078125, 0.8003125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #22: [0.300078125, 0.8003125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #22: [0.300078125, 0.8003125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #22: [0.300078125, 0.8003125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #23: [0.30015625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #23: [0.30015625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #23: [0.30015625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #23: [0.30015625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #24: [0.3, 0.8003125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #24: [0.3, 0.8003125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #24: [0.3, 0.8003125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #24: [0.3, 0.8003125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #25: [0.30015625, 0.7996875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #25: [0.30015625, 0.7996875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #25: [0.30015625, 0.7996875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #25: [0.30015625, 0.7996875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #26: [0.3000390625, 0.80015625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #26: [0.3000390625, 0.80015625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #26: [0.3000390625, 0.80015625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #26: [0.3000390625, 0.80015625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #27: [0.300078125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #27: [0.300078125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #27: [0.300078125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #27: [0.300078125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #28: [0.3, 0.80015625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #28: [0.3, 0.80015625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #28: [0.3, 0.80015625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #28: [0.3, 0.80015625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #29: [0.300078125, 0.7998437500000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #29: [0.300078125, 0.7998437500000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #29: [0.300078125, 0.7998437500000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #29: [0.300078125, 0.7998437500000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #30: [0.30001953125, 0.800078125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #30: [0.30001953125, 0.800078125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #30: [0.30001953125, 0.800078125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #30: [0.30001953125, 0.800078125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #31: [0.3000390625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #31: [0.3000390625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #31: [0.3000390625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #31: [0.3000390625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #32: [0.3, 0.800078125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #32: [0.3, 0.800078125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #32: [0.3, 0.800078125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #33: [0.3000390625, 0.799921875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #32: [0.3, 0.800078125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #33: [0.3000390625, 0.799921875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #34: [0.30000976562500004, 0.8000390625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #33: [0.3000390625, 0.799921875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #33: [0.3000390625, 0.799921875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #34: [0.30000976562500004, 0.8000390625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #35: [0.30001953125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #34: [0.30000976562500004, 0.8000390625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #34: [0.30000976562500004, 0.8000390625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #35: [0.30001953125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #36: [0.3, 0.8000390625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #35: [0.30001953125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #35: [0.30001953125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #36: [0.3, 0.8000390625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #37: [0.30001953125, 0.7999609375000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #36: [0.3, 0.8000390625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #36: [0.3, 0.8000390625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #37: [0.30001953125, 0.7999609375000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #37: [0.30001953125, 0.7999609375000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #38: [0.3000048828125, 0.80001953125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #37: [0.30001953125, 0.7999609375000001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #38: [0.3000048828125, 0.80001953125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #38: [0.3000048828125, 0.80001953125]
+Done mass_function_like status = 0 
+
+Running module mass_function_like
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #39: [0.30000976562500004, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #39: [0.30000976562500004, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #38: [0.3000048828125, 0.80001953125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #40: [0.3, 0.80001953125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #39: [0.30000976562500004, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #40: [0.3, 0.80001953125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #39: [0.30000976562500004, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #41: [0.300009765625, 0.7999804687500001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #41: [0.300009765625, 0.7999804687500001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #40: [0.3, 0.80001953125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #40: [0.3, 0.80001953125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #42: [0.30000244140625, 0.800009765625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #42: [0.30000244140625, 0.800009765625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #41: [0.300009765625, 0.7999804687500001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #41: [0.300009765625, 0.7999804687500001]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #43: [0.3000048828125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #43: [0.3000048828125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #42: [0.30000244140625, 0.800009765625]
+Done mass_function_like status = 0 
+
+Running module mass_function_like
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #42: [0.30000244140625, 0.800009765625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #44: [0.3, 0.800009765625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #43: [0.3000048828125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #43: [0.3000048828125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #44: [0.3, 0.800009765625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #45: [0.3000048828125, 0.799990234375]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #45: [0.3000048828125, 0.799990234375]
+Posterior = 2.6592600369327783 for parameter set #44: [0.3, 0.800009765625]
+Running module mass_function_like
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #44: [0.3, 0.800009765625]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #46: [0.300001220703125, 0.8000048828125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #45: [0.3000048828125, 0.799990234375]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #45: [0.3000048828125, 0.799990234375]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #46: [0.300001220703125, 0.8000048828125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #47: [0.30000244140625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #47: [0.30000244140625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #46: [0.300001220703125, 0.8000048828125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #46: [0.300001220703125, 0.8000048828125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #48: [0.3, 0.8000048828125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #47: [0.30000244140625, 0.8]
+Pipeline ran okay.
+Running module mass_function_like
+Posterior = 2.6592600369327783 for parameter set #48: [0.3, 0.8000048828125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #47: [0.30000244140625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #49: [0.30000244140625, 0.7999951171875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #49: [0.30000244140625, 0.7999951171875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #48: [0.3, 0.8000048828125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #48: [0.3, 0.8000048828125]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #50: [0.3000006103515625, 0.8000024414062501]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #50: [0.3000006103515625, 0.8000024414062501]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #49: [0.30000244140625, 0.7999951171875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #49: [0.30000244140625, 0.7999951171875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #51: [0.300001220703125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #51: [0.300001220703125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #50: [0.3000006103515625, 0.8000024414062501]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #50: [0.3000006103515625, 0.8000024414062501]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #52: [0.3, 0.8000024414062501]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #52: [0.3, 0.8000024414062501]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #51: [0.300001220703125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #51: [0.300001220703125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #53: [0.300001220703125, 0.79999755859375]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #53: [0.300001220703125, 0.79999755859375]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #52: [0.3, 0.8000024414062501]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #52: [0.3, 0.8000024414062501]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #54: [0.30000030517578125, 0.8000012207031251]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #54: [0.30000030517578125, 0.8000012207031251]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #53: [0.300001220703125, 0.79999755859375]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #53: [0.300001220703125, 0.79999755859375]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #55: [0.3000006103515625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #55: [0.3000006103515625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #54: [0.30000030517578125, 0.8000012207031251]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #56: [0.3, 0.8000012207031251]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #54: [0.30000030517578125, 0.8000012207031251]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #56: [0.3, 0.8000012207031251]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #55: [0.3000006103515625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #55: [0.3000006103515625, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #57: [0.3000006103515625, 0.799998779296875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #57: [0.3000006103515625, 0.799998779296875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #56: [0.3, 0.8000012207031251]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #58: [0.3000001525878906, 0.8000006103515626]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #56: [0.3, 0.8000012207031251]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #58: [0.3000001525878906, 0.8000006103515626]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #57: [0.3000006103515625, 0.799998779296875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #59: [0.30000030517578125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #57: [0.3000006103515625, 0.799998779296875]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #59: [0.30000030517578125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #58: [0.3000001525878906, 0.8000006103515626]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #60: [0.3, 0.8000006103515626]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #58: [0.3000001525878906, 0.8000006103515626]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #60: [0.3, 0.8000006103515626]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #59: [0.30000030517578125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #61: [0.30000030517578125, 0.7999993896484375]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #59: [0.30000030517578125, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #60: [0.3, 0.8000006103515626]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #61: [0.30000030517578125, 0.7999993896484375]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #62: [0.3000000762939453, 0.8000003051757812]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #60: [0.3, 0.8000006103515626]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #61: [0.30000030517578125, 0.7999993896484375]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #62: [0.3000000762939453, 0.8000003051757812]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #63: [0.3000001525878906, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #61: [0.30000030517578125, 0.7999993896484375]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #63: [0.3000001525878906, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #64: [0.3, 0.8000003051757812]
+Optimization terminated successfully.
+         Current function value: 0.000000
+         Iterations: 16
+         Function evaluations: 63
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #62: [0.3000000762939453, 0.8000003051757812]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #62: [0.3000000762939453, 0.8000003051757812]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #64: [0.3, 0.8000003051757812]
+Optimization terminated successfully.
+         Current function value: 0.000000
+         Iterations: 16
+         Function evaluations: 63
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #65: [0.3, 0.8]
+
+
+[Rank 0] Optimization run 1 of 1
+[Rank 0] Best fit (by likelihood):
+0.3   0.8
+[Rank 0] Posterior: 2.6592600369327783
+[Rank 0] Likelihood: 0
+
+Total posterior evaluations = 65 across all processes
+Successful posterior evaluations = 65 across all processes
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #63: [0.3000001525878906, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #63: [0.3000001525878906, 0.8]
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #65: [0.3, 0.8]
+
+
+[Rank 0] Optimization run 1 of 1
+[Rank 0] Best fit (by likelihood):
+0.3   0.8
+[Rank 0] Posterior: 2.6592600369327783
+[Rank 0] Likelihood: 0
+
+Total posterior evaluations = 65 across all processes
+Successful posterior evaluations = 65 across all processes
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #64: [0.3, 0.8000003051757812]
+Optimization terminated successfully.
+         Current function value: 0.000000
+         Iterations: 16
+         Function evaluations: 63
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #64: [0.3, 0.8000003051757812]
+Optimization terminated successfully.
+         Current function value: 0.000000
+         Iterations: 16
+         Function evaluations: 63
+Running module mass_function_like
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #65: [0.3, 0.8]
+
+
+[Rank 0] Optimization run 1 of 1
+[Rank 0] Best fit (by likelihood):
+0.3   0.8
+[Rank 0] Posterior: 2.6592600369327783
+[Rank 0] Likelihood: 0
+
+Total posterior evaluations = 65 across all processes
+Successful posterior evaluations = 65 across all processes
+Done mass_function_like status = 0 
+
+Pipeline ran okay.
+Posterior = 2.6592600369327783 for parameter set #65: [0.3, 0.8]
+
+
+[Rank 0] Optimization run 1 of 1
+[Rank 0] Best fit (by likelihood):
+0.3   0.8
+[Rank 0] Posterior: 2.6592600369327783
+[Rank 0] Likelihood: 0
+
+Total posterior evaluations = 65 across all processes
+Successful posterior evaluations = 65 across all processes

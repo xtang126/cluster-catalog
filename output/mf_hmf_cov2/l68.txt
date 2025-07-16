@@ -1,0 +1,5 @@
+#parameter l68 data_set
+cosmological_parameters--omega_m  0.2760801664547431  mf_xt/output/mf_hmf_cov2.txt
+cosmological_parameters--sigma8_input  0.7363318192185988  mf_xt/output/mf_hmf_cov2.txt
+prior  1.83258146374831  mf_xt/output/mf_hmf_cov2.txt
+post  0.9513273372133308  mf_xt/output/mf_hmf_cov2.txt

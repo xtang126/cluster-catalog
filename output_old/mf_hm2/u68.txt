@@ -1,0 +1,5 @@
+#parameter u68 data_set
+cosmological_parameters--omega_m  0.3048506970247985  mf_xt/output/mf_hm4.txt
+cosmological_parameters--sigma8_input  0.8165595570635108  mf_xt/output/mf_hm4.txt
+prior  2.6592600369327783  mf_xt/output/mf_hm4.txt
+post  2.4269282227673  mf_xt/output/mf_hm4.txt

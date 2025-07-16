@@ -1,0 +1,477 @@
+Setting up pipeline from parameter file mf_xt/fit_mass_function.ini
+-------------------------------------------------------------------
+
+Setting up module consistency
+------------------------------
+
+Setting up module camb
+-----------------------
+
+Setting up module mf_tinker
+----------------------------
+Setting up pipeline from parameter file mf_xt/fit_mass_function.ini
+-------------------------------------------------------------------
+
+Setting up module consistency
+------------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+[mass_function_like] Loading:
+  m_h from mf_xt/results_mf_z03/mass_function/m_h.txt
+  dndlnmh from mf_xt/results_mf_z03/mass_function/dndlnmh.txt
+
+Setting up module camb
+-----------------------
+
+Setting up module mf_tinker
+----------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+[mass_function_like] Loading:
+  m_h from mf_xt/results_mf_z03/mass_function/m_h.txt
+  dndlnmh from mf_xt/results_mf_z03/mass_function/dndlnmh.txt
+Setting up pipeline from parameter file mf_xt/fit_mass_function.ini
+-------------------------------------------------------------------
+
+Setting up module consistency
+------------------------------
+
+Setting up module camb
+-----------------------
+
+Setting up module mf_tinker
+----------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+[mass_function_like] Loading:
+  m_h from mf_xt/results_mf_z03/mass_function/m_h.txt
+  dndlnmh from mf_xt/results_mf_z03/mass_function/dndlnmh.txt
+Setting up pipeline from parameter file mf_xt/fit_mass_function.ini
+-------------------------------------------------------------------
+
+Setting up module consistency
+------------------------------
+
+Setting up module camb
+-----------------------
+
+Setting up module mf_tinker
+----------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+[mass_function_like] Loading:
+  m_h from mf_xt/results_mf_z03/mass_function/m_h.txt
+  dndlnmh from mf_xt/results_mf_z03/mass_function/dndlnmh.txt
+[mass_function_like] z_index = 6, bins = 845, using Gaussian likelihood
+[mass_function_like] z_index = 6, bins = 845, using Gaussian likelihood
+[mass_function_like] z_index = 6, bins = 845, using Gaussian likelihood
+[mass_function_like] z_index = 6, bins = 845, using Gaussian likelihood
+
+Setting up module rescale
+--------------------------
+Setup all pipeline modules
+
+
+Setting up module rescale
+--------------------------
+Setup all pipeline modules
+
+
+Setting up module rescale
+--------------------------
+Setup all pipeline modules
+
+
+Setting up module rescale
+--------------------------
+Setup all pipeline modules
+
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.2, 0.4)
+cosmological_parameters--sigma8_input  ~ U(0.6, 1.0)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: emcee
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_c1.txt
+****************************************************
+Generating starting positions in small ball around starting point
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.2, 0.4)
+cosmological_parameters--sigma8_input  ~ U(0.6, 1.0)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: emcee
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_c1.txt
+****************************************************
+Generating starting positions in small ball around starting point
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.2, 0.4)
+cosmological_parameters--sigma8_input  ~ U(0.6, 1.0)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: emcee
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_c1.txt
+****************************************************
+Generating starting positions in small ball around starting point
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.2, 0.4)
+cosmological_parameters--sigma8_input  ~ U(0.6, 1.0)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: emcee
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_c1.txt
+****************************************************
+Generating starting positions in small ball around starting point
+Begun sampling
+Begun sampling
+Begun sampling
+Running module consistency
+Running module consistency
+Running module consistency
+Begun sampling
+Running module consistency
+Done consistency status = 0 
+
+Running module camb
+Done consistency status = 0 
+
+Running module camb
+Done consistency status = 0 
+
+Running module camb
+Done consistency status = 0 
+
+Running module camb
+Done camb status = 0 
+
+Running module mf_tinker
+Done mf_tinker status = 0 
+
+Running module mass_function_like
+Observed dndlnmh: [0.0001896  0.00018281 0.00017622 0.00016983 0.00016364 0.00015764
+ 0.00015183 0.0001462  0.00014075 0.00013547 0.00013035]
+Model dndlnmh   : [0.00021045 0.00020343 0.00019662 0.00019001 0.00018358 0.00017735
+ 0.00017129 0.00016542 0.00015972 0.00015418 0.00014881]
+Max model: 24.80617904294459
+Max data : 17.912145438162295
+Data mass range : 1003996.6775729556 9.955614343250632e+16
+Model mass range: 45683.781396625105 1.8692768137825962e+17
+Min model: 8.849246950476466e-32
+Min data : 1.2642048002314548e-39
+Where max model happens: 0
+Where max data happens : 0
+[mass_function_like] In extract_theory_points
+omega_m: 0.29965951284067766
+sigma8: 0.7993552828497157
+Done camb status = 0 
+
+Running module mf_tinker
+Done camb status = 0 
+
+Running module mf_tinker
+Done camb status = 0 
+
+Running module mf_tinker
+Done mf_tinker status = 0 
+
+Running module mass_function_like
+Observed dndlnmh: [0.0001896  0.00018281 0.00017622 0.00016983 0.00016364 0.00015764
+ 0.00015183 0.0001462  0.00014075 0.00013547 0.00013035]
+Model dndlnmh   : [0.00021067 0.00020365 0.00019684 0.00019022 0.00018379 0.00017755
+ 0.00017149 0.00016561 0.00015991 0.00015437 0.00014899]
+Max model: 24.535923012150164
+Max data : 17.912145438162295
+Data mass range : 1003996.6775729556 9.955614343250632e+16
+Model mass range: 45683.781396625105 1.8692768137825962e+17
+Min model: 8.896238358506122e-32
+Min data : 1.2642048002314548e-39
+Where max model happens: 0
+Where max data happens : 0
+[mass_function_like] In extract_theory_points
+omega_m: 0.29993976957851193
+sigma8: 0.8002854815376688
+Done mf_tinker status = 0 
+
+Running module mass_function_like
+Observed dndlnmh: [0.0001896  0.00018281 0.00017622 0.00016983 0.00016364 0.00015764
+ 0.00015183 0.0001462  0.00014075 0.00013547 0.00013035]
+Model dndlnmh   : [0.00021055 0.00020354 0.00019672 0.00019011 0.00018368 0.00017744
+ 0.00017139 0.00016551 0.0001598  0.00015427 0.0001489 ]
+Max model: 24.518806787927613
+Max data : 17.912145438162295
+Data mass range : 1003996.6775729556 9.955614343250632e+16
+Model mass range: 45683.781396625105 1.8692768137825962e+17
+Min model: 8.870894212687387e-32
+Min data : 1.2642048002314548e-39
+Where max model happens: 0
+Where max data happens : 0
+[mass_function_like] In extract_theory_points
+omega_m: 0.2997899648312142
+sigma8: 0.8000048725753808
+Done mf_tinker status = 0 
+
+Running module mass_function_like
+Observed dndlnmh: [0.0001896  0.00018281 0.00017622 0.00016983 0.00016364 0.00015764
+ 0.00015183 0.0001462  0.00014075 0.00013547 0.00013035]
+Model dndlnmh   : [0.00021068 0.00020366 0.00019684 0.00019022 0.00018379 0.00017755
+ 0.0001715  0.00016562 0.00015991 0.00015437 0.000149  ]
+Max model: 24.53156223054508
+Max data : 17.912145438162295
+Data mass range : 1003996.6775729556 9.955614343250632e+16
+Model mass range: 45683.781396625105 1.8692768137825962e+17
+Min model: 8.896828820619641e-32
+Min data : 1.2642048002314548e-39
+Where max model happens: 0
+Where max data happens : 0
+[mass_function_like] In extract_theory_points
+omega_m: 0.2999439837301672
+sigma8: 0.7995784020595893
+Done mass_function_like status = 0 
+
+Running module rescale
+Done rescale status = 0 
+
+Pipeline ran okay.
+Using likelihooods from first run:
+ - mass_function_xt
+Likelihood mass_function_xt = -150.395641091051
+Posterior = -147.86991244674275 for parameter set #1: [0.29993976957851193, 0.8002854815376688]
+Running module consistency
+Done consistency status = 0 
+
+Running module camb
+Done mass_function_like status = 0 
+
+Running module rescale
+Done rescale status = 0 
+
+Pipeline ran okay.
+Using likelihooods from first run:
+ - mass_function_xt
+Likelihood mass_function_xt = -149.30222073570945
+Posterior = -146.7764920914012 for parameter set #1: [0.29978996483121423, 0.8000048725753808]
+Running module consistency
+Done consistency status = 0 
+
+Running module camb
+Done mass_function_like status = 0 
+
+Running module rescale
+Done mass_function_like status = 0 
+
+Running module rescale
+Done rescale status = 0 
+
+Pipeline ran okay.
+Using likelihooods from first run:
+ - mass_function_xt
+Done rescale status = 0 
+
+Pipeline ran okay.
+Likelihood mass_function_xt = -150.502323569476
+Using likelihooods from first run:
+ - mass_function_xt
+Likelihood mass_function_xt = -174.78348895620204
+Posterior = -147.97659492516775 for parameter set #1: [0.2999439837301672, 0.7995784020595893]
+Posterior = -172.25776031189378 for parameter set #1: [0.2996595128406776, 0.7993552828497157]
+Running module consistency
+Running module consistency
+Done consistency status = 0 
+
+Running module camb
+Done consistency status = 0 
+
+Running module camb
+Done camb status = 0 
+
+Running module mf_tinker
+Done camb status = 0 
+
+Running module mf_tinker
+Done mf_tinker status = 0 
+
+Running module mass_function_like
+Observed dndlnmh: [0.0001896  0.00018281 0.00017622 0.00016983 0.00016364 0.00015764
+ 0.00015183 0.0001462  0.00014075 0.00013547 0.00013035]
+Model dndlnmh   : [0.00021071 0.00020369 0.00019688 0.00019026 0.00018383 0.00017759
+ 0.00017153 0.00016565 0.00015994 0.0001544  0.00014903]
+Max model: 24.53445443010216
+Max data : 17.912145438162295
+Data mass range : 1003996.6775729556 9.955614343250632e+16
+Model mass range: 45683.781396625105 1.8692768137825962e+17
+Min model: 8.904430734909785e-32
+Min data : 1.2642048002314548e-39
+Where max model happens: 0
+Where max data happens : 0
+[mass_function_like] In extract_theory_points
+omega_m: 0.2999887129468045
+sigma8: 0.8007794946180106
+Done mf_tinker status = 0 
+
+Running module mass_function_like
+Observed dndlnmh: [0.0001896  0.00018281 0.00017622 0.00016983 0.00016364 0.00015764
+ 0.00015183 0.0001462  0.00014075 0.00013547 0.00013035]
+Model dndlnmh   : [0.00021075 0.00020373 0.00019691 0.00019029 0.00018386 0.00017762
+ 0.00017156 0.00016568 0.00015997 0.00015443 0.00014905]
+Max model: 24.53454200479276
+Max data : 17.912145438162295
+Data mass range : 1003996.6775729556 9.955614343250632e+16
+Model mass range: 45683.781396625105 1.8692768137825962e+17
+Min model: 8.911585842552708e-32
+Min data : 1.2642048002314548e-39
+Where max model happens: 0
+Where max data happens : 0
+[mass_function_like] In extract_theory_points
+omega_m: 0.3000317764595312
+sigma8: 0.8005276332099387
+Done camb status = 0 
+
+Running module mf_tinker
+Done camb status = 0 
+
+Running module mf_tinker
+Done mf_tinker status = 0 
+
+Running module mass_function_like
+Observed dndlnmh: [0.0001896  0.00018281 0.00017622 0.00016983 0.00016364 0.00015764
+ 0.00015183 0.0001462  0.00014075 0.00013547 0.00013035]
+Model dndlnmh   : [0.00021067 0.00020365 0.00019683 0.00019021 0.00018378 0.00017754
+ 0.00017149 0.00016561 0.0001599  0.00015436 0.00014899]
+Max model: 24.530703839961262
+Max data : 17.912145438162295
+Data mass range : 1003996.6775729556 9.955614343250632e+16
+Model mass range: 45683.781396625105 1.8692768137825962e+17
+Min model: 8.894522475615325e-32
+Min data : 1.2642048002314548e-39
+Where max model happens: 0
+Where max data happens : 0
+[mass_function_like] In extract_theory_points
+omega_m: 0.29993080768058183
+sigma8: 0.8004730122566205
+Done mf_tinker status = 0 
+
+Running module mass_function_like
+Observed dndlnmh: [0.0001896  0.00018281 0.00017622 0.00016983 0.00016364 0.00015764
+ 0.00015183 0.0001462  0.00014075 0.00013547 0.00013035]
+Model dndlnmh   : [0.00021043 0.00020342 0.0001966  0.00018999 0.00018357 0.00017733
+ 0.00017128 0.0001654  0.0001597  0.00015417 0.0001488 ]
+Max model: 24.805527738124123
+Max data : 17.912145438162295
+Data mass range : 1003996.6775729556 9.955614343250632e+16
+Model mass range: 45683.781396625105 1.8692768137825962e+17
+Min model: 8.845070279489081e-32
+Min data : 1.2642048002314548e-39
+Where max model happens: 0
+Where max data happens : 0
+[mass_function_like] In extract_theory_points
+omega_m: 0.2996357308508497
+sigma8: 0.8005327202798556
+Done mass_function_like status = 0 
+
+Running module rescale
+Done rescale status = 0 
+
+Pipeline ran okay.
+Likelihood mass_function_xt = -150.40331425757407
+Posterior = -147.8775856132658 for parameter set #2: [0.3000317764595312, 0.8005276332099387]
+Running module consistency
+Done consistency status = 0 
+
+Running module camb
+Done mass_function_like status = 0 
+
+Running module rescale
+Done rescale status = 0 
+
+Pipeline ran okay.
+Likelihood mass_function_xt = -150.43673766618758
+Posterior = -147.91100902187932 for parameter set #2: [0.2999887129468045, 0.8007794946180106]
+Running module consistency
+Done consistency status = 0 
+
+Running module camb
+Done mass_function_like status = 0 
+
+Running module rescale
+Done rescale status = 0 
+
+Pipeline ran okay.
+Likelihood mass_function_xt = -150.42143737771804
+Posterior = -147.89570873340978 for parameter set #2: [0.2999308076805818, 0.8004730122566205]
+Running module consistency
+Done consistency status = 0 
+
+Running module camb
+Done mass_function_like status = 0 
+
+Running module rescale
+Done rescale status = 0 
+
+Pipeline ran okay.
+Likelihood mass_function_xt = -174.56641261332297
+Posterior = -172.0406839690147 for parameter set #2: [0.2996357308508497, 0.8005327202798556]
+Running module consistency
+Done consistency status = 0 
+
+Running module camb
+slurmstepd: error: *** STEP 40137535.2 ON nid004143 CANCELLED AT 2025-07-02T10:09:24 DUE TO TIME LIMIT ***

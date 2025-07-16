@@ -1,0 +1,4 @@
+mass_function_xt_chi2 = 3.5524485199767025e-31
+mass_function_xt_log_det = 0.0
+mass_function_xt_n = 5
+mass_function_xt_norm = -0.0

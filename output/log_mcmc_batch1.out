@@ -1,0 +1,145 @@
+Setting up pipeline from parameter file mf_xt/fit_mass_function_hmf.ini
+-----------------------------------------------------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+Setting up pipeline from parameter file mf_xt/fit_mass_function_hmf.ini
+-----------------------------------------------------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+Setting up pipeline from parameter file mf_xt/fit_mass_function_hmf.ini
+-----------------------------------------------------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+Setting up pipeline from parameter file mf_xt/fit_mass_function_hmf.ini
+-----------------------------------------------------------------------
+
+Setting up module mass_function_like
+-------------------------------------
+Setup all pipeline modules
+
+Setup all pipeline modules
+
+Setup all pipeline modules
+
+Setup all pipeline modules
+
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.1, 0.5)
+cosmological_parameters--sigma8_input  ~ U(0.6, 1.0)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: emcee
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_hmf_cov.txt
+****************************************************
+Generating starting positions in small ball around starting point
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.1, 0.5)
+cosmological_parameters--sigma8_input  ~ U(0.6, 1.0)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: emcee
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_hmf_cov.txt
+****************************************************
+Generating starting positions in small ball around starting point
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.1, 0.5)
+cosmological_parameters--sigma8_input  ~ U(0.6, 1.0)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: emcee
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_hmf_cov.txt
+****************************************************
+Generating starting positions in small ball around starting point
+
+Parameter Priors
+----------------
+cosmological_parameters--omega_m       ~ U(0.1, 0.5)
+cosmological_parameters--sigma8_input  ~ U(0.6, 1.0)
+cosmological_parameters--h0            ~ delta(0.7)
+cosmological_parameters--omega_b       ~ delta(0.04)
+cosmological_parameters--omega_k       ~ delta(0.0)
+cosmological_parameters--yhe           ~ delta(0.245341)
+cosmological_parameters--tau           ~ delta(0.08)
+cosmological_parameters--n_s           ~ delta(0.96)
+cosmological_parameters--a_s           ~ delta(2.1e-09)
+cosmological_parameters--k_s           ~ delta(0.05)
+cosmological_parameters--n_run         ~ delta(0.0)
+cosmological_parameters--w             ~ delta(-1.0)
+cosmological_parameters--wa            ~ delta(0.0)
+
+****************************************************
+* Running sampler 1/1: emcee
+* Running in serial mode.
+* Saving output -> mf_xt/output/mf_hmf_cov.txt
+****************************************************
+Generating starting positions in small ball around starting point
+Begun sampling
+Begun sampling
+Begun sampling
+Begun sampling
+Using likelihooods from first run:
+ - mass_function_xt
+Using likelihooods from first run:
+ - mass_function_xt
+Using likelihooods from first run:
+ - mass_function_xt
+Using likelihooods from first run:
+ - mass_function_xt
+Done 100 iterations of emcee. Acceptance fraction 0.756
+Done 100 iterations of emcee. Acceptance fraction 0.761
+Done 100 iterations of emcee. Acceptance fraction 0.742
+Done 100 iterations of emcee. Acceptance fraction 0.745
+Done 200 iterations of emcee. Acceptance fraction 0.735
+Done 200 iterations of emcee. Acceptance fraction 0.733
+Done 200 iterations of emcee. Acceptance fraction 0.726
+Done 200 iterations of emcee. Acceptance fraction 0.733
+Done 300 iterations of emcee. Acceptance fraction 0.726
+Done 300 iterations of emcee. Acceptance fraction 0.726
+Done 300 iterations of emcee. Acceptance fraction 0.728
+Done 300 iterations of emcee. Acceptance fraction 0.722
+Done 400 iterations of emcee. Acceptance fraction 0.728

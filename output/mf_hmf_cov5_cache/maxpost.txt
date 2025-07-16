@@ -1,0 +1,5 @@
+#parameter maxpost data_set
+cosmological_parameters--omega_m  0.2999611121181322  mf_xt/output/mf_hmf_cov5_cache.txt
+cosmological_parameters--sigma8_input  0.8000276341282972  mf_xt/output/mf_hmf_cov5_cache.txt
+prior  1.83258146374831  mf_xt/output/mf_hmf_cov5_cache.txt
+post  1.8325809252500995  mf_xt/output/mf_hmf_cov5_cache.txt

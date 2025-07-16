@@ -1,0 +1,5 @@
+#parameter peak1d data_set
+cosmological_parameters--omega_m  0.30101128482598727  mf_xt/output/mf_c1.txt
+cosmological_parameters--sigma8_input  0.8009387943768247  mf_xt/output/mf_c1.txt
+prior  nan  mf_xt/output/mf_c1.txt
+post  2.5257246813226253  mf_xt/output/mf_c1.txt

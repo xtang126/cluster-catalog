@@ -1,0 +1,55 @@
+name: mass_function_like
+version: '1.1'
+purpose: Gaussian likelihood for cosmological parameter fitting using the halo mass function
+url: null
+interface: mass_function_like.py
+attribution: [Xin Tang (xt52@sussex.ac.uk), and the CosmoSIS team]
+rules: None.
+cite: []
+assumptions:
+- Compares only one redshift slice at a time (specified by z_index)
+- Observational mass function has fixed fractional errors
+- Theory mass function is provided by the CosmoSIS module mf_tinker or equivalent
+- Mass bin interpolation is linear and assumes monotonic m_h array
+
+explanation: >
+    This module computes a Gaussian likelihood to compare observed halo mass function data (dndlnmh) to theoretical predictions.
+    
+    The data is provided as a set of values dndlnmh(m_h) for a fixed redshift slice (selected by z_index). The module compares these values to a model mass function computed using the mf_tinker module in CosmoSIS, for the same redshift index and over the same mass range.
+    
+    Linear interpolation is used to map the theoretical mass function to the observed mass bins. A constant fractional uncertainty is assumed for the Gaussian error model.
+
+params:
+    mass_file:
+        meaning: File containing 1D array of halo masses (m_h)
+        type: str
+    dndlnmh_file:
+        meaning: File containing 2D array of dndlnmh values (rows = redshift slices)
+        type: str
+    z_index:
+        meaning: Redshift slice index to compare; selects row in 2D dndlnmh array
+        type: int
+        default: 0
+    relative_sigma:
+        meaning: Assumed fractional uncertainty on dndlnmh values (e.g., 0.01 for 1%)
+        type: real
+        default: 0.01
+    like_name:
+        meaning: Name used for the likelihood result saved in the CosmoSIS data block
+        type: str
+        default: mass_function
+
+inputs:
+    mass_function:
+        m_h:
+            meaning: Model halo mass grid
+            type: real 1d
+        dndlnmh:
+            meaning: Model dndlnmh(z, m_h); 2D array with shape (nz, nm)
+            type: real 2d
+
+outputs:
+    likelihoods:
+        mass_function_like:
+            meaning: Log-likelihood comparing model to observed dndlnmh
+            type: real

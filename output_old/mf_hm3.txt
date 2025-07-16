@@ -1,0 +1,88 @@
+#cosmological_parameters--omega_m	cosmological_parameters--sigma8_input	prior	like	post
+#sampler=maxlike
+#n_varied=2
+#module_0=mass_function_like 1.1
+#timestamp=2025-07-03T04:13:19.883906
+#platform=Linux-5.14.21-150500.55.97_13.0.78-cray_shasta_c-x86_64-with-glibc2.31
+#platform_version=#1 SMP Thu Mar 13 20:09:44 UTC 2025 (330b47d)
+#uuid=55706707fdaa4d738f143fb004613e36
+#cosmosis_git_version=
+#csl_git_version=
+#cwd_git_version=5ff5d9a45b876d0c2ecc0c6da8da4c99a4c65ef7
+#tolerance=1e-06
+#maxiter=1000
+#output_ini=mf_xt/output/mf_maxlike.ini
+#output_covmat=
+#method=Nelder-Mead
+#max_posterior=False
+#repeats=1
+#nsteps=1
+#start_method=
+## START_OF_PARAMS_INI
+## [runtime]
+## sampler = maxlike
+## root = /global/homes/x/xintang/cosmosis-standard-library
+## resume = F
+## verbosity = debug
+## 
+## [test]
+## save_dir = mf_xt/output/mass_function_xt_hm
+## 
+## [emcee]
+## walkers = 32
+## samples = 800
+## burn = 200
+## save_all_parameters = T
+## output_every = 1
+## 
+## [maxlike]
+## output_ini = mf_xt/output/mf_maxlike.ini
+## tolerance = 1e-6
+## 
+## [output]
+## filename = mf_xt/output/mf_hm3.txt
+## format = text
+## lock = F
+## new_file = T
+## 
+## [pipeline]
+## modules = mass_function_like
+## values = mf_xt/values_fit.ini
+## 
+## [prior]
+## omega_m = uniform 0.1 0.5
+## sigma8_input = uniform 0.5 1.0
+## 
+## [likelihoods]
+## mass_function_xt = mass_function_like
+## 
+## [mass_function_like]
+## file = mf_xt/likelihood/mass_function_like_hmf.py
+## z_indices = 1, 2, 5
+## relative_sigma = 0.1
+## 
+## END_OF_PARAMS_INI
+## START_OF_VALUES_INI
+## [cosmological_parameters]
+## omega_m = 0.2 0.3 0.4
+## sigma8_input = 0.6 0.8 0.95
+## h0 = 0.7
+## omega_b = 0.04
+## omega_k = 0.0
+## yhe = 0.245341
+## tau = 0.08
+## n_s = 0.96
+## a_s = 2.1e-9
+## k_s = 0.05
+## n_run = 0.0
+## w = -1.0
+## wa = 0.0
+## 
+## END_OF_VALUES_INI
+## START_OF_PRIORS_INI
+## END_OF_PRIORS_INI
+#start_input=
+0.3	0.8	2.6592600369327783	-8.603664285292223e-35	2.6592600369327783
+#evaluations=69
+#successes=69
+#complete=1

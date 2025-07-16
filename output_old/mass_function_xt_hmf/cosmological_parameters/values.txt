@@ -1,0 +1,13 @@
+a_s = 2.1e-09
+h0 = 0.7
+k_s = 0.05
+n_run = 0.0
+n_s = 0.96
+omega_b = 0.04
+omega_k = 0.0
+omega_m = 0.3
+sigma8_input = 0.8
+tau = 0.08
+w = -1.0
+wa = 0.0
+yhe = 0.245341
