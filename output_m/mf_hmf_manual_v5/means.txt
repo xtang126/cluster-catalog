@@ -1,0 +1,5 @@
+#parameter means sigma data_set
+cosmological_parameters--omega_m  0.29989374766257065  0.00048339463012272207  mf_xt/output/mf_hmf_manual_v5.txt
+cosmological_parameters--sigma8_input  0.8001418422529731  0.0003327614145292266  mf_xt/output/mf_hmf_manual_v5.txt
+prior  1.8325814637483093  6.661338147750939e-16  mf_xt/output/mf_hmf_manual_v5.txt
+post  -inf  nan  mf_xt/output/mf_hmf_manual_v5.txt

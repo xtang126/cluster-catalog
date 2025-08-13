@@ -1,0 +1,5 @@
+#parameter l95 data_set
+cosmological_parameters--omega_m  0.2990120882332772  mf_xt/output/mf_hmf_manual_v5.txt
+cosmological_parameters--sigma8_input  0.7997689134398308  mf_xt/output/mf_hmf_manual_v5.txt
+prior  1.83258146374831  mf_xt/output/mf_hmf_manual_v5.txt
+post  nan  mf_xt/output/mf_hmf_manual_v5.txt
