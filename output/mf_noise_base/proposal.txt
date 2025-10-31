@@ -1,0 +1,3 @@
+#cosmological_parameters--omega_m cosmological_parameters--sigma8_input
+5.222952940237264e-05  -3.9854322845843045e-05
+-3.9854322845843045e-05  3.336459292811259e-05

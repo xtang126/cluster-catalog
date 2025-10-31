@@ -1,0 +1,5 @@
+#parameter l95 data_set
+cosmological_parameters--omega_m  0.28357998254086336  mf_xt/output/mf_noise_data.txt
+cosmological_parameters--sigma8_input  0.779446110980886  mf_xt/output/mf_noise_data.txt
+prior  1.4494780938377896  mf_xt/output/mf_noise_data.txt
+post  -16.537827898721304  mf_xt/output/mf_noise_data.txt

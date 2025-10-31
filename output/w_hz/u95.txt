@@ -1,0 +1,6 @@
+#parameter u95 data_set
+cosmological_parameters--omega_m  0.32094843305540494  mf_xt/output/mf_w_highz1.txt
+cosmological_parameters--sigma8_input  0.8305423673779696  mf_xt/output/mf_w_highz1.txt
+cosmological_parameters--w  -0.9995  mf_xt/output/mf_w_highz1.txt
+prior  6.679162090515748  mf_xt/output/mf_w_highz1.txt
+post  -1.832506835941322  mf_xt/output/mf_w_highz1.txt

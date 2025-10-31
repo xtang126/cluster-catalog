@@ -1,0 +1,5 @@
+#parameter lerr95 data_set
+cosmological_parameters--omega_m  0.27635245177335876  mf_xt/output/mf_noise_data.txt
+cosmological_parameters--sigma8_input  0.7743650018646174  mf_xt/output/mf_noise_data.txt
+prior  1.753716924211341  mf_xt/output/mf_noise_data.txt
+post  -17.202329675283035  mf_xt/output/mf_noise_data.txt

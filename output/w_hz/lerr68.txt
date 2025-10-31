@@ -1,0 +1,6 @@
+#parameter lerr68 data_set
+cosmological_parameters--omega_m  0.29639931766092426  mf_xt/output/mf_w_highz1.txt
+cosmological_parameters--sigma8_input  0.7977910937704041  mf_xt/output/mf_w_highz1.txt
+cosmological_parameters--w  nan  mf_xt/output/mf_w_highz1.txt
+prior  6.247006452472613  mf_xt/output/mf_w_highz1.txt
+post  -28.969930008178835  mf_xt/output/mf_w_highz1.txt

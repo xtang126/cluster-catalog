@@ -1,0 +1,6 @@
+#parameter means sigma data_set
+cosmological_parameters--omega_m  0.3098641927986381  0.009675635786189228  mf_xt/output/mf_w_lowz1.txt
+cosmological_parameters--sigma8_input  0.8106118596276045  0.021308275880514968  mf_xt/output/mf_w_lowz1.txt
+cosmological_parameters--w  -0.9994999999999998  2.220446049250313e-16  mf_xt/output/mf_w_lowz1.txt
+prior  5.724703061131756  1.2416940872984141  mf_xt/output/mf_w_lowz1.txt
+post  -799.696976002743  1534.7355819049308  mf_xt/output/mf_w_lowz1.txt

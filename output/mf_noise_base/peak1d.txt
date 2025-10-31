@@ -1,0 +1,5 @@
+#parameter peak1d data_set
+cosmological_parameters--omega_m  0.319096472037472  mf_xt/output/mf_noise_base.txt
+cosmological_parameters--sigma8_input  0.8002458278009008  mf_xt/output/mf_noise_base.txt
+prior  nan  mf_xt/output/mf_noise_base.txt
+post  -8.941498732683295  mf_xt/output/mf_noise_base.txt

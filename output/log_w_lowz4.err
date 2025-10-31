@@ -1,0 +1,102 @@
+/global/homes/x/xintang/.local/lib/python3.11/site-packages/hmf/density_field/transfer_models.py:233: UserWarning: 'extrapolate_with_eh' was not set. Defaulting to True, which is different behaviour than versions <=3.4.4. This warning may be removed in v4.0. Silence it by setting extrapolate_with_eh explicitly.
+  warnings.warn(
+/global/homes/x/xintang/.local/lib/python3.11/site-packages/hmf/density_field/transfer_models.py:233: UserWarning: 'extrapolate_with_eh' was not set. Defaulting to True, which is different behaviour than versions <=3.4.4. This warning may be removed in v4.0. Silence it by setting extrapolate_with_eh explicitly.
+  warnings.warn(
+/global/homes/x/xintang/.local/lib/python3.11/site-packages/hmf/density_field/transfer_models.py:233: UserWarning: 'extrapolate_with_eh' was not set. Defaulting to True, which is different behaviour than versions <=3.4.4. This warning may be removed in v4.0. Silence it by setting extrapolate_with_eh explicitly.
+  warnings.warn(
+/global/homes/x/xintang/.local/lib/python3.11/site-packages/hmf/density_field/transfer_models.py:233: UserWarning: 'extrapolate_with_eh' was not set. Defaulting to True, which is different behaviour than versions <=3.4.4. This warning may be removed in v4.0. Silence it by setting extrapolate_with_eh explicitly.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/dvs_ro/cfs/projectdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/bin/cosmosis", line 4, in <module>
+Traceback (most recent call last):
+  File "/dvs_ro/cfs/projectdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/bin/cosmosis", line 4, in <module>
+Traceback (most recent call last):
+  File "/dvs_ro/cfs/projectdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/bin/cosmosis", line 4, in <module>
+Traceback (most recent call last):
+  File "/dvs_ro/cfs/projectdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/bin/cosmosis", line 4, in <module>
+    status = cosmosis.main.main()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/main.py", line 554, in main
+    status = cosmosis.main.main()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/main.py", line 554, in main
+    status = cosmosis.main.main()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/main.py", line 554, in main
+    status = cosmosis.main.main()
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/main.py", line 554, in main
+    return run_cosmosis(ini=args.inifile, pool=pool, override=args.params, profile_mem=args.mem, profile_cpu=args.profile, variables=args.variables, only=args.only)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/main.py", line 295, in run_cosmosis
+    return run_cosmosis(ini=args.inifile, pool=pool, override=args.params, profile_mem=args.mem, profile_cpu=args.profile, variables=args.variables, only=args.only)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/main.py", line 295, in run_cosmosis
+    return run_cosmosis(ini=args.inifile, pool=pool, override=args.params, profile_mem=args.mem, profile_cpu=args.profile, variables=args.variables, only=args.only)
+    return run_cosmosis(ini=args.inifile, pool=pool, override=args.params, profile_mem=args.mem, profile_cpu=args.profile, variables=args.variables, only=args.only)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/main.py", line 295, in run_cosmosis
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/main.py", line 288, in run_cosmosis
+    pipeline = LikelihoodPipeline(ini, override=variables, values=values, only=only, priors=priors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/pipeline.py", line 778, in __init__
+    pipeline = LikelihoodPipeline(ini, override=variables, values=values, only=only, priors=priors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/pipeline.py", line 778, in __init__
+    pipeline = LikelihoodPipeline(ini, override=variables, values=values, only=only, priors=priors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/pipeline.py", line 778, in __init__
+    pipeline = LikelihoodPipeline(ini, override=variables, values=values, only=only, priors=priors)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/pipeline.py", line 778, in __init__
+    self.setup()
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/pipeline.py", line 464, in setup
+    self.setup()
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/pipeline.py", line 464, in setup
+    self.setup()
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/pipeline.py", line 464, in setup
+    self.setup()
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/pipeline.py", line 464, in setup
+    module.setup(config_block)
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/module.py", line 231, in setup
+    module.setup(config_block)
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/module.py", line 231, in setup
+    module.setup(config_block)
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/module.py", line 231, in setup
+    module.setup(config_block)
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/module.py", line 231, in setup
+    self.setup_functions(config)
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/module.py", line 204, in setup_functions
+    self.setup_functions(config)
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/module.py", line 204, in setup_functions
+    self.setup_functions(config)
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/module.py", line 204, in setup_functions
+    self.setup_functions(config)
+  File "/global/cfs/cdirs/des/zuntz/cosmosis-global/perlmutter/env-3.15/lib/python3.11/site-packages/cosmosis/runtime/module.py", line 204, in setup_functions
+    self.data = self.setup_function(config)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    self.data = self.setup_function(config)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/x/xintang/cosmosis-standard-library/mf_xt/likelihoods/hmf_counts.py", line 97, in setup
+  File "/global/homes/x/xintang/cosmosis-standard-library/mf_xt/likelihoods/hmf_counts.py", line 97, in setup
+    self.data = self.setup_function(config)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/x/xintang/cosmosis-standard-library/mf_xt/likelihoods/hmf_counts.py", line 97, in setup
+    self.data = self.setup_function(config)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/homes/x/xintang/cosmosis-standard-library/mf_xt/likelihoods/hmf_counts.py", line 97, in setup
+    N_obs = V * N_int  # deimensionless
+            ~~^~~~~~~
+TypeError: can't multiply sequence by non-int of type 'numpy.float64'
+    N_obs = V * N_int  # deimensionless
+            ~~^~~~~~~
+TypeError: can't multiply sequence by non-int of type 'numpy.float64'
+    N_obs = V * N_int  # deimensionless
+            ~~^~~~~~~
+TypeError: can't multiply sequence by non-int of type 'numpy.float64'
+    N_obs = V * N_int  # deimensionless
+            ~~^~~~~~~
+TypeError: can't multiply sequence by non-int of type 'numpy.float64'
+srun: error: nid005034: tasks 0-3: Exited with exit code 1
+srun: Terminating StepId=43683235.0

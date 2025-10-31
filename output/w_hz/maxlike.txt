@@ -1,0 +1,6 @@
+#parameter maxlike data_set
+cosmological_parameters--omega_m  0.29915655253686024  mf_xt/output/mf_w_highz1.txt
+cosmological_parameters--sigma8_input  0.819354853691103  mf_xt/output/mf_w_highz1.txt
+cosmological_parameters--w  -0.9995  mf_xt/output/mf_w_highz1.txt
+prior  6.675747180194815  mf_xt/output/mf_w_highz1.txt
+post  -1.7057668773222368  mf_xt/output/mf_w_highz1.txt

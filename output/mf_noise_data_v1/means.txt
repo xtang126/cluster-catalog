@@ -1,0 +1,5 @@
+#parameter means sigma data_set
+cosmological_parameters--omega_m  0.10036875015779137  0.0010511172444615034  mf_xt/output/mf_noise_date_v1.txt
+cosmological_parameters--sigma8_input  0.6004854665867974  0.0020001501880944216  mf_xt/output/mf_noise_date_v1.txt
+prior  1.8325814637483093  6.661338147750939e-16  mf_xt/output/mf_noise_date_v1.txt
+post  -3932081.430271724  71.42447838876237  mf_xt/output/mf_noise_date_v1.txt

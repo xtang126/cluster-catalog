@@ -1,0 +1,5 @@
+#parameter u68 data_set
+cosmological_parameters--omega_m  0.3213752786451477  mf_xt/output/mf_noise_base.txt
+cosmological_parameters--sigma8_input  0.8024804750903469  mf_xt/output/mf_noise_base.txt
+prior  1.83258146374831  mf_xt/output/mf_noise_base.txt
+post  -8.835717024809826  mf_xt/output/mf_noise_base.txt

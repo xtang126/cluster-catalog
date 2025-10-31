@@ -1,0 +1,6 @@
+#parameter peak1d data_set
+cosmological_parameters--omega_m  0.30134236232895273  mf_xt/output/mf_w_lowz1.txt
+cosmological_parameters--sigma8_input  0.7994428418160676  mf_xt/output/mf_w_lowz1.txt
+cosmological_parameters--w  nan  mf_xt/output/mf_w_lowz1.txt
+prior  6.576383961075685  mf_xt/output/mf_w_lowz1.txt
+post  -22.02418455356451  mf_xt/output/mf_w_lowz1.txt

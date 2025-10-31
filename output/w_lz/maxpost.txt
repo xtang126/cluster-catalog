@@ -1,0 +1,6 @@
+#parameter maxpost data_set
+cosmological_parameters--omega_m  0.30019115626666976  mf_xt/output/mf_w_lowz1.txt
+cosmological_parameters--sigma8_input  0.8420359601308173  mf_xt/output/mf_w_lowz1.txt
+cosmological_parameters--w  -0.9995  mf_xt/output/mf_w_lowz1.txt
+prior  6.679121494718764  mf_xt/output/mf_w_lowz1.txt
+post  -1.4657696183240674  mf_xt/output/mf_w_lowz1.txt
