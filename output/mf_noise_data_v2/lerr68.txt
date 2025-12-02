@@ -1,0 +1,5 @@
+#parameter lerr68 data_set
+cosmological_parameters--omega_m  0.4941471830241941  mf_xt/output/mf_noise_date_v2.txt
+cosmological_parameters--sigma8_input  0.6904679679626172  mf_xt/output/mf_noise_date_v2.txt
+prior  nan  mf_xt/output/mf_noise_date_v2.txt
+post  -12061.106498236913  mf_xt/output/mf_noise_date_v2.txt

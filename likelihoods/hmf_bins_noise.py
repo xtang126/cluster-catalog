@@ -1,4 +1,4 @@
-# example config file: hmf_bins_noise_data.ini
+# example config file: hmf_bins_base.ini
 
 '''
 Custom Poisson likelihood for halo mass function:
@@ -170,6 +170,7 @@ def setup(options):
         "sigma_obs": sigma_obs,
         "M_edges_logh": M_edges_logh, # true bin edges
         "mf": mf,
+        "sigma_logM": sigma_logM,     # <--- NEW: keep scatter for MODEL
     }
 
     return config
@@ -186,6 +187,7 @@ def execute(block, config):
     M_edges_logh = config["M_edges_logh"]
     N_obs = config["N_obs"]
     sigma_obs = config["sigma_obs"]
+    sigma_logM = config["sigma_logM"]   # <--- same scatter as in setup (A)
 
     # update mf cosmology
     mf.cosmo_params["Om0"] = omegam
@@ -194,16 +196,27 @@ def execute(block, config):
     V = V_shell_cached(zmin, zmax, omegam, area_deg2)
     z_mid = 0.5 * (zmin + zmax)
 
-    # model WITHOUT scatter: just mass function in each bin
-    N_model = compute_counts_per_bin(mf, M_edges_logh, V, z_mid)
+    # 1) true model counts (no scatter)
+    N_true_model = compute_counts_per_bin(mf, M_edges_logh, V, z_mid)
 
-    # Gaussian/chi2 likelihood (since you're already using that)
-    residual = (N_obs - N_model) / sigma_obs
-    chi2 = np.sum(residual**2)
-    loglike = -0.5 * chi2
+    # 2) apply SAME migration matrix to the MODEL
+    P_model = build_migration_matrix(M_edges_logh, sigma_logM)
+    N_model = P_model @ N_true_model
+
+    # 3) Gaussian/chi2 likelihood
+    #residual = (N_obs - N_model) / sigma_obs
+    #chi2 = np.sum(residual**2)
+    #loglike = -0.5 * chi2
+
+    N_model_safe = np.clip(N_model, 1e-12, None)
+    loglike = np.sum(
+        N_obs * np.log(N_model_safe) - N_model_safe - gammaln(N_obs + 1)
+    )
+
 
     block["likelihoods", "hmf_bins_like"] = loglike
     return 0
+
 
 
 def cleanup(config):
