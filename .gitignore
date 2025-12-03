@@ -1,0 +1,17 @@
+# ignore output files
+output/
+output_m/
+output_old/
+plots/
+*.out
+*.txt
+*.dat
+*.log
+
+
+# ignore python cache
+__pycache__/
+*.pyc
+
+# ignore notebooks checkpoints
+.ipynb_checkpoints/
