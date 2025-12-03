@@ -1,12 +1,11 @@
-# example config file: hmf_bins_base.ini
+# example config file: scatter_massde_fit.ini
+# Mass-dependent scatter sigma_logM(M) as a nuisance function to be varied in the likelihood.
 
 '''
 Custom Poisson likelihood for halo mass function:
 - Compares cluster counts to HMF prediction (Tinker08, hmf package)
 - Assumes selection function = 1
 - Uses cached MassFunction and precomputed quantities for speed
-
-v2 (03/12/2025): Set sigma_logM as a nuisance parameter to be varied in the likelihood.
 
 Contact: Xin Tang (xt52@sussex.ac.uk)
 
@@ -219,7 +218,7 @@ def execute(block, config):
     )
 
 
-    block["likelihoods", "hmf_bins_like"] = loglike
+    block["likelihoods", "hmf_like"] = loglike
     return 0
 
 

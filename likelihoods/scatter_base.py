@@ -1,9 +1,10 @@
-# hmf_counts.py
-# example config file: hmf_counts.ini
+# scatter_base.py
+# example config file: scatter_const_fit.ini (old version)
+# no scatter applied, just base poisson likelihood
 
 '''
 Custom Poisson likelihood for halo mass function:
-- Compares cluster counts to HMF prediction (Tinker08, hmf package)
+- Compares mock cluster counts to HMF prediction (Tinker08, hmf package)
 - Assumes single redshift/mass bin, selection function = 1
 - Uses cached MassFunction and precomputed quantities for speed
 

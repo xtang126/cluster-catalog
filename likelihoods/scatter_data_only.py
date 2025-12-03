@@ -1,4 +1,5 @@
-# example config file: hmf_bins_noise_data.ini
+# example config file: scatter_data_only.ini
+# only generate scattered mock data, no model scatter applied
 
 '''
 Custom Poisson likelihood for halo mass function:
