@@ -1,0 +1,6 @@
+#parameter l68 data_set
+cosmological_parameters--omega_m  0.30885563467112226  mf_xt/output/mf_noise_v2.txt
+cosmological_parameters--sigma8_input  0.7981595770994834  mf_xt/output/mf_noise_v2.txt
+nuisance_parameters--sigma_logm  0.09980933371963893  mf_xt/output/mf_noise_v2.txt
+prior  2.8824035882469876  mf_xt/output/mf_noise_v2.txt
+post  -44.84816056457319  mf_xt/output/mf_noise_v2.txt

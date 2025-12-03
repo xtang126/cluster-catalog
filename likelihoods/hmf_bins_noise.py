@@ -6,6 +6,8 @@ Custom Poisson likelihood for halo mass function:
 - Assumes selection function = 1
 - Uses cached MassFunction and precomputed quantities for speed
 
+v2 (03/12/2025): Set sigma_logM as a nuisance parameter to be varied in the likelihood.
+
 Contact: Xin Tang (xt52@sussex.ac.uk)
 
 '''
@@ -152,25 +154,25 @@ def setup(options):
     N_true = compute_counts_per_bin(mf, M_edges_logh, V, z_mid)
 
     # mass scatter for the mock (your choice: 0.1 dex etc.)
-    sigma_logM = options.get_double(option_section, "sigma_logM", default=0.1)
+    sigma_logM_data = options.get_double(option_section, "sigma_logM_data", default=0.1)  #v2: changed name, seperate from model
 
     # migration matrix -> mis-binned observed counts
-    P = build_migration_matrix(M_edges_logh, sigma_logM)
+    P = build_migration_matrix(M_edges_logh, sigma_logM_data)
     N_obs_bins = P @ N_true   # this is your "data" vector
 
     # Poisson error for chi2 / Gaussian approx
     N_obs_bins = np.clip(N_obs_bins, np.finfo(float).eps, None)
-    sigma_obs = np.sqrt(N_obs_bins)
+    #sigma_obs = np.sqrt(N_obs_bins)
 
     config = {
         "zmin": zmin,
         "zmax": zmax,
         "area_deg2": area_deg2,
         "N_obs": N_obs_bins,          # <-- scattered mock data
-        "sigma_obs": sigma_obs,
+        #"sigma_obs": sigma_obs,
         "M_edges_logh": M_edges_logh, # true bin edges
         "mf": mf,
-        "sigma_logM": sigma_logM,     # <--- NEW: keep scatter for MODEL
+        #"sigma_logM": sigma_logM,     # <--- NEW: keep scatter for MODEL; v2: no longer fixed
     }
 
     return config
@@ -179,6 +181,9 @@ def setup(options):
 def execute(block, config):
     omegam = block[names.cosmological_parameters, "omega_m"]
     sigma8 = block[names.cosmological_parameters, "sigma8_input"]
+    
+    # v2: read scatter from nuisance block
+    sigma_logM = block["nuisance_parameters", "sigma_logM"]
 
     zmin = config["zmin"]
     zmax = config["zmax"]
@@ -186,8 +191,8 @@ def execute(block, config):
     mf = config["mf"]
     M_edges_logh = config["M_edges_logh"]
     N_obs = config["N_obs"]
-    sigma_obs = config["sigma_obs"]
-    sigma_logM = config["sigma_logM"]   # <--- same scatter as in setup (A)
+    #sigma_obs = config["sigma_obs"]
+    #sigma_logM = config["sigma_logM"]   # <--- same scatter as in setup (A)
 
     # update mf cosmology
     mf.cosmo_params["Om0"] = omegam
