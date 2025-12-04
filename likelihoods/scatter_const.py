@@ -1,14 +1,14 @@
-# example config file: scatter_data_only.ini
-# only generate scattered mock data, no model scatter applied
+# scatter_const.py
+# Example config file: scatter_const.ini
 
 '''
 Custom Poisson likelihood for halo mass function:
 - Compares cluster counts to HMF prediction (Tinker08, hmf package)
 - Assumes selection function = 1
+- INCLUDES mass–observable scatter in both data and model
 - Uses cached MassFunction and precomputed quantities for speed
 
 Contact: Xin Tang (xt52@sussex.ac.uk)
-
 '''
 
 import numpy as np
@@ -26,6 +26,7 @@ from math import erf, sqrt
 h = 0.7
 H0 = h * 100  # km/s/Mpc
 
+
 def volume_shell(zmin, zmax, Om0, area_deg2):
     """Return h^-3 Mpc^3 so it pairs with h^3 Mpc^-3 number densities."""
     cosmo = FlatLambdaCDM(H0=H0, Om0=Om0)
@@ -34,6 +35,7 @@ def volume_shell(zmin, zmax, Om0, area_deg2):
     f_sky = area_deg2 / 41253.0
     return V * f_sky
 
+
 # ---- cached comoving volume shell ----
 def V_shell_cached(zmin, zmax, Om0, area_deg2):
     return _V_shell_cached(
@@ -41,22 +43,26 @@ def V_shell_cached(zmin, zmax, Om0, area_deg2):
         round(Om0, 5),  round(area_deg2, 3)
     )
 
+
 @lru_cache(maxsize=2000)
 def _V_shell_cached(z1, z2, om_r, area_r):
     cosmo = FlatLambdaCDM(H0=H0, Om0=float(om_r))
     V = (cosmo.comoving_volume(float(z2)) - cosmo.comoving_volume(float(z1))).to(u.Mpc**3).value
     return V / h**3 * (float(area_r) / 41253.0)
 
+
 def integrate_fixed(n_z, zmin, zmax, N=4):
     x, w = leggauss(N)
-    z_nodes = 0.5*(zmax - zmin)*x + 0.5*(zmax + zmin)
-    weights = 0.5*(zmax - zmin)*w
+    z_nodes = 0.5 * (zmax - zmin) * x + 0.5 * (zmax + zmin)
+    weights = 0.5 * (zmax - zmin) * w
     return np.sum(weights * np.array([n_z(z) for z in z_nodes]))
+
 
 def gaussian_cdf(x, mu, sigma):
     # scalar Gaussian CDF in log10(M)
     t = (x - mu) / (sqrt(2.0) * sigma)
     return 0.5 * (1.0 + erf(t))
+
 
 def build_migration_matrix(M_edges_logh, sigma_logM):
     """
@@ -84,15 +90,18 @@ def build_migration_matrix(M_edges_logh, sigma_logM):
 
     return P
 
+
 def compute_counts_per_bin(mf, M_edges_logh, V, z_mid, omegam=None, sigma8=None):
     """
     Expected counts per *true* mass bin (no scatter).
 
-    If ``omegam`` and ``sigma8`` are provided, the MassFunction cosmology
-    is updated once for this sample using ``mf.update`` so that all internal
-    quantities (power spectrum, sigma(M), dndm, ...) are consistent.
+    If omegam and sigma8 are given, update the MassFunction cosmology ONCE
+    for this sample using mf.update, so all internal quantities
+    (P(k), sigma(M), dndm, ...) are consistent.
     """
-    # Optionally update cosmology for this sample
+    M_edges_logh = np.asarray(M_edges_logh)
+
+    # Update cosmology once per sample if requested
     if (omegam is not None) or (sigma8 is not None):
         mf.update(
             z=z_mid,
@@ -104,7 +113,7 @@ def compute_counts_per_bin(mf, M_edges_logh, V, z_mid, omegam=None, sigma8=None)
 
     N_counts = []
     for logMmin, logMmax in zip(M_edges_logh[:-1], M_edges_logh[1:]):
-        # Now only change the mass range; cosmology and z are kept fixed
+        # Only change the mass bin edges; cosmology and z fixed
         mf.update(Mmin=logMmin, Mmax=logMmax)
         if len(mf.m) < 2:
             N_counts.append(0.0)
@@ -114,67 +123,58 @@ def compute_counts_per_bin(mf, M_edges_logh, V, z_mid, omegam=None, sigma8=None)
         N_counts.append(n_mid * V)
     return np.array(N_counts, dtype=float)
 
+
 def setup(options):
     # ----- Fiducial cosmology for MOCK generation only -----
-    Om0 = 0.318
-    sigma8 = 0.8
-       
+    Om0_fid = 0.318
+    sigma8_fid = 0.8
+
     # Redshift bin
     zmin = options.get_double(option_section, "z_min", default=0.3)
     zmax = options.get_double(option_section, "z_max", default=0.8)
-    
+
     # Survey area
     area_deg2 = options.get_double(option_section, "area_deg2", default=1000.0)
-    
+
+    # Mass range
     mmin = options.get_double(option_section, "mass_min", default=1e14)
     mmax = options.get_double(option_section, "mass_max", default=1e15)
     if not (mmax > mmin > 0):
         raise ValueError("mass_min/mass_max must be positive and mass_max > mass_min")
-    
+
     z_mid = 0.5 * (zmin + zmax)
-    
-    # Build ONE MassFunction to set up mass grid
+
+    # Build ONE MassFunction to set up mass grid and fiducial cosmology
     mf = MassFunction(
-        z=z_mid,              # any value; we will update per node
-        sigma_8=sigma8,         # fixed fiducial
-        cosmo_params={"H0": H0, "Om0": Om0},
+        z=z_mid,                # will be updated in execute for each sample
+        sigma_8=sigma8_fid,     # fixed fiducial for mock generation
+        cosmo_params={"H0": H0, "Om0": Om0_fid},
         Mmin=np.log10(mmin),
         Mmax=np.log10(mmax),
         dlog10m=0.1,
         hmf_model="Tinker08",
-        #n=0.96,
     )
-    
-    # Fixed mass grid and bin widths (Msun/h; dM has same units)
-    #M = mf.m
-    #dM = np.gradient(M)
-    '''
-    def number_density_z(z):
-        mf.update(z=z) #reuse precomputed mass grid
-        n_z = np.sum(mf.dndm * dM)   # -> h^3 Mpc^-3
-        return n_z
-    '''
 
-    # define logarithmic mass bins
-    # --- Mass bins (log10 M/h) ---
+    # Mass bins (log10 M/h)
     nM = 10
     M_edges_logh = np.linspace(np.log10(mmin), np.log10(mmax), nM + 1)
 
-    # volume of the shell for mock generation (fiducial Om0, sigma8)
-    V = volume_shell(zmin, zmax, Om0, area_deg2)
-    z_mid = 0.5 * (zmin + zmax)
+    # Volume of the shell for mock generation (fiducial Om0, sigma8)
+    V_fid = volume_shell(zmin, zmax, Om0_fid, area_deg2)
 
-    # true (no-scatter) counts per true mass bin
-    N_true = compute_counts_per_bin(mf, M_edges_logh, V, z_mid)
+    # True (no-scatter) counts per true mass bin for fiducial cosmology
+    N_true_fid = compute_counts_per_bin(mf, M_edges_logh, V_fid, z_mid)
 
-    # mass scatter for the mock (your choice: 0.1 dex etc.)
+    # Mass scatter in log10(M)
     sigma_logM = options.get_double(option_section, "sigma_logM", default=0.1)
 
-    # migration matrix -> mis-binned observed counts
+    # Build migration matrix ONCE and use it for both data and model
     P = build_migration_matrix(M_edges_logh, sigma_logM)
-    N_obs_bins = P @ N_true   # this is your "data" vector
 
-    # Poisson error for chi2 / Gaussian approx
+    # "Observed" (scattered) mock data vector
+    N_obs_bins = P @ N_true_fid
+
+    # For reference / possible Gaussian approximation
     N_obs_bins = np.clip(N_obs_bins, np.finfo(float).eps, None)
     sigma_obs = np.sqrt(N_obs_bins)
 
@@ -182,10 +182,12 @@ def setup(options):
         "zmin": zmin,
         "zmax": zmax,
         "area_deg2": area_deg2,
-        "N_obs": N_obs_bins,          # <-- scattered mock data
-        "sigma_obs": sigma_obs,
-        "M_edges_logh": M_edges_logh, # true bin edges
+        "M_edges_logh": M_edges_logh,
         "mf": mf,
+        "N_obs": N_obs_bins,   # scattered mock data
+        "sigma_obs": sigma_obs,
+        "sigma_logM": sigma_logM,
+        "P": P,                 # SAME migration matrix used in execute
     }
 
     return config
@@ -201,24 +203,25 @@ def execute(block, config):
     mf = config["mf"]
     M_edges_logh = config["M_edges_logh"]
     N_obs = config["N_obs"]
-    sigma_obs = config["sigma_obs"]
+    P = config["P"]  # same scatter matrix as used in setup
 
+    # Volume for this cosmology
     V = V_shell_cached(zmin, zmax, omegam, area_deg2)
     z_mid = 0.5 * (zmin + zmax)
 
-    # model WITHOUT scatter: just mass function in each bin,
-    # with cosmology updated via mf.update inside compute_counts_per_bin
-    N_model = compute_counts_per_bin(
+    # 1) True model counts (no scatter) for current (omegam, sigma8)
+    N_true_model = compute_counts_per_bin(
         mf, M_edges_logh, V, z_mid, omegam=omegam, sigma8=sigma8
     )
 
-    # model WITHOUT scatter: just mass function in each bin
-    N_model = compute_counts_per_bin(mf, M_edges_logh, V, z_mid)
+    # 2) Apply SAME migration matrix to the MODEL as to the data
+    N_model = P @ N_true_model
 
-    # Gaussian/chi2 likelihood (since you're already using that)
-    residual = (N_obs - N_model) / sigma_obs
-    chi2 = np.sum(residual**2)
-    loglike = -0.5 * chi2
+    # 3) Poisson likelihood
+    N_model_safe = np.clip(N_model, 1e-12, None)
+    loglike = np.sum(
+        N_obs * np.log(N_model_safe) - N_model_safe - gammaln(N_obs + 1.0)
+    )
 
     block["likelihoods", "hmf_like"] = loglike
     return 0

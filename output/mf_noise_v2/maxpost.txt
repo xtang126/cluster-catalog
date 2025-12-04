@@ -1,6 +1,0 @@
-#parameter maxpost data_set
-cosmological_parameters--omega_m  0.31798178900105795  mf_xt/output/mf_noise_v2.txt
-cosmological_parameters--sigma8_input  0.7999776811975259  mf_xt/output/mf_noise_v2.txt
-nuisance_parameters--sigma_logm  0.09999952247274445  mf_xt/output/mf_noise_v2.txt
-prior  2.8824035882469876  mf_xt/output/mf_noise_v2.txt
-post  -43.09040858774544  mf_xt/output/mf_noise_v2.txt

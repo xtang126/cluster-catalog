@@ -83,31 +83,8 @@ def setup(options):
         N_obs_bins.append(n_mid * V)
     N_obs_bins = np.array(N_obs_bins)
 
-    # --- Add optional Gaussian noise to mock data counts ---(need update)
-    '''
-    add_noise = options.get_bool(option_section, "add_noise", default=True)
-    noise_sigma = options.get_double(option_section, "noise_sigma", default=0.1)
-    
-    if add_noise:
-        N_obs_bins += np.random.normal(0, noise_sigma * N_obs_bins)
-        N_obs_bins = np.clip(N_obs_bins, 1.0, None)
-    '''
     sigma_obs = np.sqrt(N_obs_bins) #Poisson sigma = sqrt(N_obs)
     
-    # Add Gaussian random noise to simulate measurement uncertainty ---
-    # 0.05 = 5% relative scatter
-    #noise_fraction = 0.05
-    #noise = np.random.normal(0, noise_fraction * N_obs)
-    #N_obs_noisy = N_obs + noise
-
-    # Optionally enforce N_obs > 0
-    #N_obs_noisy = max(N_obs_noisy, 1.0)
-    
-    #print(f"Observed N: {N_obs}, sigma_obs: {sigma_obs}")
-    #print(f"Observed N (noisy mock): {N_obs_noisy:.3f}, sigma_obs: {sigma_obs:.3f} (noise added)")
-    
-    #print(f"Observed N: {N_obs}, sigma_obs: {sigma_obs}")
-
     config = {
         "zmin": zmin,
         "zmax": zmax,
@@ -152,7 +129,7 @@ def execute(block, config):
         loglike_bin = N_obs_bin * np.log(N_model_safe) - N_model_safe - gammaln(N_obs_bin + 1)
         loglike_total += loglike_bin
 
-    block["likelihoods", "hmf_bins_like"] = loglike_total
+    block["likelihoods", "hmf_like"] = loglike_total
     
     return 0
 

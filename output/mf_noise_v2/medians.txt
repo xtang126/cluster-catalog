@@ -1,6 +1,0 @@
-#parameter medians sigma data_set
-cosmological_parameters--omega_m  0.3192481514832136  0.021940628703457414  mf_xt/output/mf_noise_v2.txt
-cosmological_parameters--sigma8_input  0.8002848427769358  0.004427418822669031  mf_xt/output/mf_noise_v2.txt
-nuisance_parameters--sigma_logm  0.10001971872554569  0.000439804172221549  mf_xt/output/mf_noise_v2.txt
-prior  2.8824035882469876  0.0  mf_xt/output/mf_noise_v2.txt
-post  -44.27703300212731  1.2287693826779023  mf_xt/output/mf_noise_v2.txt
