@@ -212,9 +212,6 @@ def execute(block, config):
         mf, M_edges_logh, V, z_mid, omegam=omegam, sigma8=sigma8
     )
 
-    # model WITHOUT scatter: just mass function in each bin
-    N_model = compute_counts_per_bin(mf, M_edges_logh, V, z_mid)
-
     # Gaussian/chi2 likelihood (since you're already using that)
     residual = (N_obs - N_model) / sigma_obs
     chi2 = np.sum(residual**2)

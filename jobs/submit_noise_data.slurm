@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=cosmosis_noise
-#SBATCH --output=mf_xt/output/log_noise_data_v3.out
-#SBATCH --error=mf_xt/output/log_noise_data_v3.err
-#SBATCH --time=06:00:00          # 6 hours
+#SBATCH --output=mf_xt/output/log_noise_data_v4.out
+#SBATCH --error=mf_xt/output/log_noise_data_v4.err
+#SBATCH --time=09:00:00          # 9 hours
 #SBATCH --nodes=1
 #SBATCH --ntasks=4               # Matches your `srun -n 4`
 #SBATCH --cpus-per-task=1
@@ -31,4 +31,4 @@ srun -n 4 cosmosis --mpi mf_xt/config/scatter_data_only.ini
 end=$(date +%s)
 runtime=$((end - start))
 
-echo "CosmoSIS run time: $runtime seconds" >> mf_xt/output/log_noise_data_v3.out
+echo "CosmoSIS run time: $runtime seconds" >> mf_xt/output/log_noise_data_v4.out
