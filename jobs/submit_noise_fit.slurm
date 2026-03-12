@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=cosmosis_noise_fit
-#SBATCH --output=mf_xt/output/log_noise_fit_v2.out
-#SBATCH --error=mf_xt/output/log_noise_fit_v2.err
-#SBATCH --time=06:00:00          # 6 hours
+#SBATCH --output=mf_xt/output/log_noise_massde_fit_v1.out
+#SBATCH --error=mf_xt/output/log_noise_massde_fit_v1.err
+#SBATCH --time=10:00:00          # 10 hours
 #SBATCH --nodes=1
 #SBATCH --ntasks=4               # Matches your `srun -n 4`
 #SBATCH --cpus-per-task=1
@@ -26,9 +26,9 @@ cd ~/cosmosis-standard-library
 # Run the pipeline
 start=$(date +%s)
 
-srun -n 4 cosmosis --mpi mf_xt/config/scatter_const_fit.ini
+srun -n 4 cosmosis --mpi mf_xt/config/scatter_massde_fit.ini
 
 end=$(date +%s)
 runtime=$((end - start))
 
-echo "CosmoSIS run time: $runtime seconds" >> mf_xt/output/log_noise_fit_v2.out
+echo "CosmoSIS run time: $runtime seconds" >> mf_xt/output/log_noise_massde_fit_v1.out

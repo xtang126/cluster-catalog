@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=cosmosis_noise_v1
-#SBATCH --output=mf_xt/output/log_noise_massde_v1.out
-#SBATCH --error=mf_xt/output/log_noise_massde_v1.err
+#SBATCH --job-name=cosmosis_desy1_v1
+#SBATCH --output=mf_xt/output/log_desy1_v1.out
+#SBATCH --error=mf_xt/output/log_desy1_v1.err
 #SBATCH --time=10:00:00          # 10 hours
 #SBATCH --nodes=1
 #SBATCH --ntasks=4               # Matches your `srun -n 4`
@@ -26,9 +26,9 @@ cd ~/cosmosis-standard-library
 # Run the pipeline
 start=$(date +%s)
 
-srun -n 4 cosmosis --mpi mf_xt/config/scatter_const.ini
+srun -n 4 cosmosis --mpi mf_xt/config/desy1_abundance.ini
 
 end=$(date +%s)
 runtime=$((end - start))
 
-echo "CosmoSIS run time: $runtime seconds" >> mf_xt/output/log_noise_massde_v1.out
+echo "CosmoSIS run time: $runtime seconds" >> mf_xt/output/log_desy1_v1.out
