@@ -17,7 +17,7 @@ import astropy.units as u
 from scipy.special import gammaln
 
 
-h = 0.7
+h = 0.744
 H0 = h * 100  # km/s/Mpc
 # -------------------------------------------------
 # Fixed Y1 posterior values from DES Y1
@@ -49,26 +49,6 @@ def load_data_file(path):
         "n_obs":   data[:, 4],
     }
 
-'''
-def mean_lambda_sat_y1(M, z, Mmin, M1, alpha, eta, z_pivot=0.45):
-    """
-    DES Y1 mean satellite richness:
-      <lambda_sat|M,z> = ((M-Mmin)/(M1-Mmin))^alpha * ((1+z)/(1+z_pivot))^eta
-    for M > Mmin, else 0.
-    """
-    M = np.asarray(M, dtype=float)
-    mu = np.zeros_like(M)
-
-    denom = M1 - Mmin
-    if denom <= 0.0:
-        raise ValueError("Need M1 > Mmin")
-
-    mask = M > Mmin
-    mu[mask] = ((M[mask] - Mmin) / denom) ** alpha
-    mu[mask] *= ((1.0 + z) / (1.0 + z_pivot)) ** eta
-
-    return mu
-'''
 
 def dVdz_fullsky_h3(z, cosmo, h):
     """
@@ -196,11 +176,11 @@ def expected_count_one_bin(
         M = mf.m
         dndm = mf.dndm
         dndlnM = dndm * M
-
+        '''
         if z == z_grid[0]:
             print("M range:", M[0], M[-1])
             print("Mmin, M1:", Mmin, M1)
-
+        '''
         pbin = np.array([
             p_lambda_true_bin_y1(
                 lam_lo=lam1,
@@ -332,9 +312,9 @@ def execute(block, config):
 
     n_model_safe = np.clip(n_model, 1e-20, None)
 
-    print("n_obs   =", n_obs)
-    print("n_model =", n_model_safe)
-    print("ratio   =", n_model_safe / np.maximum(n_obs, 1e-10))
+    #print("n_obs   =", n_obs)
+    #print("n_model =", n_model_safe)
+    #print("ratio   =", n_model_safe / np.maximum(n_obs, 1e-10))
 
     loglike = np.sum(
         n_obs * np.log(n_model_safe) - n_model_safe - gammaln(n_obs + 1.0)
