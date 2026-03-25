@@ -17,6 +17,8 @@ import astropy.units as u
 from scipy.special import gammaln
 
 
+h = 0.7
+H0 = h * 100  # km/s/Mpc
 # -------------------------------------------------
 # Fixed Y1 posterior values from DES Y1
 # -------------------------------------------------
@@ -68,11 +70,12 @@ def mean_lambda_sat_y1(M, z, Mmin, M1, alpha, eta, z_pivot=0.45):
     return mu
 '''
 
-def dVdz_fullsky(z, cosmo):
+def dVdz_fullsky_h3(z, cosmo, h):
     """
-    Full-sky differential comoving volume element [Mpc^3 / z]
+    Full-sky differential comoving volume element [h^-3 Mpc^3 / z]
     """
-    return (cosmo.differential_comoving_volume(z) * 4.0 * np.pi * u.sr).to(u.Mpc**3).value
+    dv_dz = (cosmo.differential_comoving_volume(z) * 4.0 * np.pi * u.sr).to(u.Mpc**3).value
+    return dv_dz / h**3
 
 
 @lru_cache(maxsize=128)
@@ -153,6 +156,7 @@ def p_lambda_true_bin_y1(lam_lo, lam_hi, M, z, Mmin, M1, alpha, eta, sigma_intr,
 def expected_count_one_bin(
     mf,
     cosmo,
+    h,
     area_deg2,
     z1,
     z2,
@@ -165,7 +169,7 @@ def expected_count_one_bin(
     sigma_intr,
     mass_min,
     mass_max,
-    n_z=12,
+    n_z=4,
     dlog10m=0.02,
 ):
     """
@@ -193,6 +197,10 @@ def expected_count_one_bin(
         dndm = mf.dndm
         dndlnM = dndm * M
 
+        if z == z_grid[0]:
+            print("M range:", M[0], M[-1])
+            print("Mmin, M1:", Mmin, M1)
+
         pbin = np.array([
             p_lambda_true_bin_y1(
                 lam_lo=lam1,
@@ -214,7 +222,7 @@ def expected_count_one_bin(
 
     n_of_z = np.asarray(n_of_z)
 
-    vol_integrand = np.array([dVdz_fullsky(z, cosmo) for z in z_grid]) * n_of_z
+    vol_integrand = np.array([dVdz_fullsky_h3(z, cosmo, h) for z in z_grid]) * n_of_z
     N = f_sky * np.trapz(vol_integrand, x=z_grid)
 
     return max(N, 1e-30)
@@ -231,10 +239,7 @@ def setup(options):
     mass_min = options.get_double(option_section, "mass_min", default=1e13)
     mass_max = options.get_double(option_section, "mass_max", default=5e15)
     dlog10m = options.get_double(option_section, "dlog10m", default=0.02)
-    n_z = options.get_int(option_section, "n_z", default=12)
-
-    h = options.get_double(option_section, "h0", default=0.7)
-    H0 = 100.0 * h
+    n_z = options.get_int(option_section, "n_z", default=4)
 
     data = load_data_file(data_file)
 
@@ -250,13 +255,13 @@ def setup(options):
 
     config = {
         "data": data,
+        "h": h,
+        "H0": H0,
         "area_deg2": area_deg2,
         "mass_min": mass_min,
         "mass_max": mass_max,
         "dlog10m": dlog10m,
         "n_z": n_z,
-        "h": h,
-        "H0": H0,
         "mf": mf,
     }
     return config
@@ -268,12 +273,13 @@ def setup(options):
 
 def execute(block, config):
     data = config["data"]
+    h = config["h"]
+    H0 = config["H0"]
     area_deg2 = config["area_deg2"]
     mass_min = config["mass_min"]
     mass_max = config["mass_max"]
     dlog10m = config["dlog10m"]
     n_z = config["n_z"]
-    H0 = config["H0"]
     mf = config["mf"]
 
     omega_m = block[names.cosmological_parameters, "omega_m"]
@@ -307,6 +313,7 @@ def execute(block, config):
         n_model[i] = expected_count_one_bin(
             mf=mf,
             cosmo=cosmo,
+            h=h,
             area_deg2=area_deg2,
             z1=data["zmin"][i],
             z2=data["zmax"][i],
@@ -324,6 +331,10 @@ def execute(block, config):
         )
 
     n_model_safe = np.clip(n_model, 1e-20, None)
+
+    print("n_obs   =", n_obs)
+    print("n_model =", n_model_safe)
+    print("ratio   =", n_model_safe / np.maximum(n_obs, 1e-10))
 
     loglike = np.sum(
         n_obs * np.log(n_model_safe) - n_model_safe - gammaln(n_obs + 1.0)
