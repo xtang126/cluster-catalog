@@ -23,8 +23,8 @@ import astropy.units as u
 h = 0.7
 H0 = h * 100.0
 
-OMEGA_M_FID = 0.18
-SIGMA8_FID = 0.85
+OMEGA_M_FID = 0.3406
+SIGMA8_FID = 0.8049
 
 # -------------------------------------------------
 # Fixed Y1-style richness parameters
@@ -43,7 +43,7 @@ SIGMA_INTR_FIXED = 0.2
 # -------------------------------------------------
 AREA_DEG2 = 1500.0
 MASS_MIN = 5e13
-MASS_MAX = 1e15
+MASS_MAX = 3e15
 DLOG10M = 0.02
 N_Z = 4
 
@@ -51,9 +51,9 @@ N_Z = 4
 # Mock options
 # -------------------------------------------------
 INPUT_BIN_FILE = "/global/homes/x/xintang/cosmosis-standard-library/mf_xt/data/desy1_abundance_data.txt"   # existing file with 5 columns
-OUTPUT_MOCK_FILE = "/global/homes/x/xintang/cosmosis-standard-library/mf_xt/data/mock_y1abundance_fid018_085.txt"
+OUTPUT_MOCK_FILE = "/global/homes/x/xintang/cosmosis-standard-library/mf_xt/data/mock_y1abundance_fid018_085_v2.txt"
 
-USE_POISSON_NOISE = False   # False = noiseless closure test first
+USE_POISSON_NOISE = True   # False = noiseless closure test first
 RNG_SEED = 1234
 
 

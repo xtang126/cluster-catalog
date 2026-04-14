@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=cosmosis_desy1_v3
-#SBATCH --output=mf_xt/output/log_desy1_v3.out
-#SBATCH --error=mf_xt/output/log_desy1_v3.err
+#SBATCH --job-name=cosmosis_desy1_v1_corrected
+#SBATCH --output=mf_xt/output/log_desy1_v1_corrected.out
+#SBATCH --error=mf_xt/output/log_desy1_v1_corrected.err
 #SBATCH --time=10:00:00          # 10 hours
 #SBATCH --nodes=1
 #SBATCH --ntasks=4               # Matches your `srun -n 4`
@@ -31,4 +31,4 @@ srun -n 4 cosmosis --mpi mf_xt/config/desy1_abundance.ini
 end=$(date +%s)
 runtime=$((end - start))
 
-echo "CosmoSIS run time: $runtime seconds" >> mf_xt/output/log_desy1_v3.out
+echo "CosmoSIS run time: $runtime seconds" >> mf_xt/output/log_desy1_v1_corrected.out

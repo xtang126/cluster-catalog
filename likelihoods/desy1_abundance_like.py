@@ -27,7 +27,7 @@ LOGM1_FIXED     = 12.37
 ALPHA_FIXED     = 0.748
 ETA_FIXED       = -0.07
 Z_PIVOT         = 0.45
-SIGMA_INTR_FIXED = 0.2
+SIGMA_INTR_FIXED = 0.4
 
 # -------------------------------------------------
 # Helpers
@@ -73,6 +73,23 @@ def gaussian_bin_prob(lam_lo, lam_hi, mean, sigma):
     a = (lam_lo - mean) / (math.sqrt(2.0) * sigma)
     b = (lam_hi - mean) / (math.sqrt(2.0) * sigma)
     return 0.5 * (math.erf(b) - math.erf(a))
+
+def p_lambda_true_bin_y1_noscatter(lam_lo, lam_hi, M, z, Mmin, M1, alpha, eta, z_pivot=0.45):
+    """
+    Deterministic no-scatter version:
+    one (M,z) -> one lambda_mean
+    """
+    lambda_cen = 1.0 if M >= Mmin else 0.0
+
+    if M > Mmin:
+        mu_sat = ((M - Mmin) / (M1 - Mmin)) ** alpha
+        mu_sat *= ((1.0 + z) / (1.0 + z_pivot)) ** eta
+    else:
+        mu_sat = 0.0
+
+    lambda_mean = lambda_cen + mu_sat
+
+    return 1.0 if (lam_lo <= lambda_mean < lam_hi) else 0.0
 
 
 def p_lambda_true_bin_y1(lam_lo, lam_hi, M, z, Mmin, M1, alpha, eta, sigma_intr, z_pivot=0.45):
@@ -149,6 +166,7 @@ def expected_count_one_bin(
     sigma_intr,
     mass_min,
     mass_max,
+    use_scatter,
     n_z=4,
     dlog10m=0.02,
 ):
@@ -181,20 +199,36 @@ def expected_count_one_bin(
             print("M range:", M[0], M[-1])
             print("Mmin, M1:", Mmin, M1)
         '''
-        pbin = np.array([
-            p_lambda_true_bin_y1(
-                lam_lo=lam1,
-                lam_hi=lam2,
-                M=m,
-                z=z,
-                Mmin=Mmin,
-                M1=M1,
-                alpha=alpha,
-                eta=eta,
-                sigma_intr=sigma_intr,
-            )
-            for m in M
-        ])
+        
+        if use_scatter:
+            pbin = np.array([
+                p_lambda_true_bin_y1(
+                    lam_lo=lam1,
+                    lam_hi=lam2,
+                    M=m,
+                    z=z,
+                    Mmin=Mmin,
+                    M1=M1,
+                    alpha=alpha,
+                    eta=eta,
+                    sigma_intr=sigma_intr,
+                )
+                for m in M
+            ])
+        else:
+            pbin = np.array([
+                p_lambda_true_bin_y1_noscatter(
+                    lam_lo=lam1,
+                    lam_hi=lam2,
+                    M=m,
+                    z=z,
+                    Mmin=Mmin,
+                    M1=M1,
+                    alpha=alpha,
+                    eta=eta,
+                )
+                for m in M
+            ])
 
         integrand = dndlnM * pbin
         n_lambda_z = np.trapz(integrand, x=np.log(M))
@@ -220,8 +254,11 @@ def setup(options):
     mass_max = options.get_double(option_section, "mass_max", default=5e15)
     dlog10m = options.get_double(option_section, "dlog10m", default=0.02)
     n_z = options.get_int(option_section, "n_z", default=4)
+    
+    use_scatter = options.get_bool(option_section, "use_scatter", default=True)
 
     data = load_data_file(data_file)
+    prediction = load_data_file("mf_xt/data/mock_y1abundance_fid018_085.txt")
 
     mf = MassFunction(
         z=0.2,
@@ -235,6 +272,7 @@ def setup(options):
 
     config = {
         "data": data,
+        "prediction": prediction,
         "h": h,
         "H0": H0,
         "area_deg2": area_deg2,
@@ -243,6 +281,7 @@ def setup(options):
         "dlog10m": dlog10m,
         "n_z": n_z,
         "mf": mf,
+        "use_scatter": use_scatter
     }
     return config
 
@@ -253,6 +292,7 @@ def setup(options):
 
 def execute(block, config):
     data = config["data"]
+    prediction = config["prediction"]
     h = config["h"]
     H0 = config["H0"]
     area_deg2 = config["area_deg2"]
@@ -261,6 +301,7 @@ def execute(block, config):
     dlog10m = config["dlog10m"]
     n_z = config["n_z"]
     mf = config["mf"]
+    use_scatter = config["use_scatter"]
 
     omega_m = block[names.cosmological_parameters, "omega_m"]
     sigma8 = block[names.cosmological_parameters, "sigma8_input"]
@@ -287,10 +328,12 @@ def execute(block, config):
     cosmo = cached_cosmo(round(H0, 6), round(float(omega_m), 6))
 
     n_obs = data["n_obs"]
+    n_pred = prediction["n_obs"]
     n_model = np.zeros_like(n_obs, dtype=float)
+    raw_model = np.zeros_like(n_obs, dtype=float)
 
     for i in range(len(n_obs)):
-        n_model[i] = expected_count_one_bin(
+        raw_model[i] = expected_count_one_bin(
             mf=mf,
             cosmo=cosmo,
             h=h,
@@ -308,14 +351,18 @@ def execute(block, config):
             mass_max=mass_max,
             n_z=n_z,
             dlog10m=dlog10m,
+            use_scatter=use_scatter
         )
+        n_model[i] = raw_model[i] * n_obs[i] / n_pred[i]
 
     n_model_safe = np.clip(n_model, 1e-20, None)
-
-    #print("n_obs   =", n_obs)
-    #print("n_model =", n_model_safe)
-    #print("ratio   =", n_model_safe / np.maximum(n_obs, 1e-10))
-
+    '''
+    print("n_obs   =", n_obs)
+    print("n_pred  =", n_pred)
+    print("raw_model =", raw_model)
+    print("n_model =", n_model_safe)
+    print("ratio   =", n_model_safe / np.maximum(n_obs, 1e-10))
+    '''
     loglike = np.sum(
         n_obs * np.log(n_model_safe) - n_model_safe - gammaln(n_obs + 1.0)
     )
