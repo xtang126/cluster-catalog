@@ -27,7 +27,7 @@ LOGM1_FIXED     = 12.37
 ALPHA_FIXED     = 0.748
 ETA_FIXED       = -0.07
 Z_PIVOT         = 0.45
-SIGMA_INTR_FIXED = 0.4
+SIGMA_INTR_DEFAULT = 0.2
 
 # -------------------------------------------------
 # Helpers
@@ -311,7 +311,7 @@ def execute(block, config):
     M1   = 10.0 ** LOGM1_FIXED
     alpha = ALPHA_FIXED
     eta   = ETA_FIXED
-    sigma_intr = SIGMA_INTR_FIXED
+    sigma_intr = SIGMA_INTR_DEFAULT
 
     if M1 <= Mmin:
         block["likelihoods", "hmf_like"] = -1.0e30
@@ -328,7 +328,7 @@ def execute(block, config):
     cosmo = cached_cosmo(round(H0, 6), round(float(omega_m), 6))
 
     n_obs = data["n_obs"]
-    n_pred = prediction["n_obs"]
+    n_pred = prediction["n_obs"] #here "n_obs" is the number counts column in the data files
     n_model = np.zeros_like(n_obs, dtype=float)
     raw_model = np.zeros_like(n_obs, dtype=float)
 
@@ -353,7 +353,7 @@ def execute(block, config):
             dlog10m=dlog10m,
             use_scatter=use_scatter
         )
-        n_model[i] = raw_model[i] * n_obs[i] / n_pred[i]
+        n_model[i] = raw_model[i] #* n_obs[i] / n_pred[i]
 
     n_model_safe = np.clip(n_model, 1e-20, None)
     '''
